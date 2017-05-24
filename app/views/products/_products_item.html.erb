@@ -1,0 +1,28 @@
+<div class="row products-show">
+  <div class="col-md-12 col-lg-10 col-lg-offset-1">
+    <div class="pull-right">
+        <%= link_to("去购买", product_path(product), class: "btn btn-info btn-sm", method: :get) %>
+    </div>
+    <p>
+      <% if render_highlight_content(product, @query_string).nil? %>
+        <%= link_to(product.title, product_path(product)) %>
+      <% else %>
+        <%= link_to(render_highlight_content(product, @query_string), prodcut_path(product)) %>
+      <% end %>
+    </p>
+
+
+    <div class="row">
+
+      <div class="col-md-4 col-sm-6">
+        <span><i class="fa fa-location-arrow" aria-hidden="true"></i>  <%= product.name %></span>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <span><i class="fa fa-clock-o" aria-hidden="true"></i>  <%= time_ago_in_words(product.created_at) %> ago</span>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <span><i class="fa fa-envelope" aria-hidden="true"></i>  <%= product.price %></span>
+      </div>
+    </div>
+  </div>
+</div>

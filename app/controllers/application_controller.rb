@@ -22,4 +22,10 @@ class ApplicationController < ActionController::Base
     session[:cart_id] = cart.id
     return cart
   end
+
+  before_filter :set_search
+
+  def set_search
+  @q= Product.search(params[:q])
+  end
 end
