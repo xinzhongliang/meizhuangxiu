@@ -16,6 +16,7 @@
 # u.save
 
 products =[{title:"Logitech mouse MT630",
+					category_id: 1,
 	        description: "The Logitech Ultrathin Touch Mouse T630 is built to complement today's
                         sleek, sophisticated Ultrabook computers. It features a brushed
                         metallic body with a silky-smooth touch surface, and the thin,
@@ -23,6 +24,7 @@ products =[{title:"Logitech mouse MT630",
 	        image_path: "http://oqecjavzf.bkt.clouddn.com/Logitech%20Ultrathin%20Touch%20Buetooth%20Mouse.jpg"},
 
 	        {title:"Bose QuietComfort 35",
+					category_id: 1,
 	        description: "World-class noise cancellation makes quiet sound quieter and music sound better
                         Volume-optimized EQ for balanced audio performance at any volume
                         Wireless convenience, with easy Bluetooth and NFC pairing aided by voice prompts
@@ -31,6 +33,7 @@ products =[{title:"Logitech mouse MT630",
 	        image_path: "http://oqecjavzf.bkt.clouddn.com/QC35.jpg"},
 
 					{title: "Apple Watch",
+					category_id: 1,
 	        description: "Gold aluminum case
 												S2 dual-core processor
 												Built-in GPS and GLONASS
@@ -43,6 +46,7 @@ products =[{title:"Logitech mouse MT630",
 	        image_path: "http://oqecjavzf.bkt.clouddn.com/watch.jpg"},
 
 					{title: "GoPro Hero5",
+					category_id: 2,
 	        description: "Stunning 4K video and 12MP photos in Single, Burst and Time Lapse modes.
 												Durable by design, HERO5 Black is waterproof to 33ft (10m) without a housing
 												Additional GoPro HERO5 Black Features + Benefits below on item page.
@@ -50,6 +54,7 @@ products =[{title:"Logitech mouse MT630",
 	        image_path: "http://oqecjavzf.bkt.clouddn.com/gopro_hero5.jpg"},
 
 					{title: "Vuzix M100 Smart Glasses",
+					category_id: 2,
 	        description: "Vuzix M100 provides the features and capabilities of a modern smartphone, without a cellular radio, in a hands-free wearable device.
 												Bluetooth 4.0 connectivity makes it easy to pair with another Android device or connect wirelessly with Wi-Fi to the Internet.
 												The M100's integrated camera captures 5 megapixel still images and 1080p high-definition video. Video and image capture can be stored directly on the M100's memory (expandable up to 32 GB) or streamed live.",
@@ -61,9 +66,9 @@ products =[{title:"Logitech mouse MT630",
 u = User.create([ email: 'admin@test.com' ,  password: '123456' ,password_confirmation:'123456',is_admin:true])
 puts "created an admin user"
 
-p1 = Product.create([title:products[0][:title],description:products[0][:description],quantity:20,price:500,image:open(products[0][:image_path])])
-p2 = Product.create([title:products[1][:title],description:products[1][:description],quantity:30,price:3000,image:open(products[1][:image_path])])
-p3 = Product.create([title:products[2][:title],description:products[2][:description],quantity:10,price:2700,image:open(products[2][:image_path])])
-p4 = Product.create([title:products[3][:title],description:products[3][:description],quantity:20,price:2500,image:open(products[3][:image_path])])
-p5 = Product.create([title:products[4][:title],description:products[4][:description],quantity:20,price:5500,image:open(products[4][:image_path])])
+p1 = Product.create([title:products[0][:title],category_id:products[0][:category_id],description:products[0][:description],quantity:20,price:500,image:open(products[0][:image_path])])
+p2 = Product.create([title:products[1][:title],category_id:products[1][:category_id],description:products[1][:description],quantity:30,price:3000,image:open(products[1][:image_path])])
+p3 = Product.create([title:products[2][:title],category_id:products[2][:category_id],description:products[2][:description],quantity:10,price:2700,image:open(products[2][:image_path])])
+p4 = Product.create([title:products[3][:title],category_id:products[3][:category_id],description:products[3][:description],quantity:20,price:2500,image:open(products[3][:image_path])])
+p5 = Product.create([title:products[4][:title],category_id:products[4][:category_id],description:products[4][:description],quantity:20,price:5500,image:open(products[4][:image_path])])
 puts "create products"
