@@ -45,6 +45,7 @@ gem 'will_paginate'
 gem 'will_paginate-bootstrap'
 gem 'seo_helper'
 gem 'rollbar'
+gem 'closure_tree'
 
 
 group :development, :test do
