@@ -15,4 +15,11 @@
 //= require turbolinks
 //= require bootstrap/alert
 //= require bootstrap/dropdown
+//= require autosize.min
+//= require jquery.countdown.min
+//= require wow.min
 //= require_tree .
+
+$(document).on("turbolinks:load", function(){
+  new WOW().init();
+})
