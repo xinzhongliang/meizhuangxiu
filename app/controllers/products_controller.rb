@@ -1,17 +1,21 @@
 class ProductsController < ApplicationController
-before_action :validate_search_key, only: [:search]
+  before_action :validate_search_key, only: [:search]
 
   def index
     if params[:category].blank?
-      @products = Product.all
+      @products = Product.where(:is_hidden => false)
     else
       @category_id = Category.find_by(name: params[:category]).id
-      @products = Product.where(:category_id => @category_id)
+      @products = Product.where({:is_hidden => false, :category_id => @category_id})
     end
   end
 
   def show
     @product = Product.find(params[:id])
+      if @product.is_hidden
+        flash[:warning] = "该产品已下架."
+        redirect_to root_path
+      end
   end
 
   def add_to_cart
@@ -40,9 +44,16 @@ before_action :validate_search_key, only: [:search]
     @search_criteria = search_criteria(@query_string)
   end
 
-
   def search_criteria(query_string)
-    { :title_cont => query_string }
+
+    { title_cont: query_string }
+
+  end
+
+  private
+
+  def product_params
+    params.require(:product).permit(:title, :description, :price, :quantity, :image, :category_id, :is_hidden)
   end
 
 end
