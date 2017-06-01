@@ -10,10 +10,6 @@
   </div>
 
   <div class="group">
-    <%= select_tag(:category_id, options_for_select(@categories), :prompt => "类别")%>
-  </div>
-
-  <div class="group">
     <%= p.input :quantity %>
   </div>
 
@@ -22,13 +18,18 @@
   </div>
 
   <% if @product.image.present? %>
-    <span>目前商品图</span>
     <%= image_tag(@product.image.thumb.url) %>
   <% end %>
 
   <div>
     <%= p.input :image, as: :file %>
   </div>
+
+  <div class="group">
+    <%= select_tag(:category_id, options_for_select(@categories), :prompt => "类别")%>
+    <span><%= @product.category.name %></span>
+  </div>
+  <br>
 
   <%= p.submit "Submit", data: { disable_with: "Submitting..."} %>
 <% end %>

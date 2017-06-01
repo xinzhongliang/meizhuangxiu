@@ -4,7 +4,12 @@ class Admin::ProductsController < ApplicationController
   before_action :admin_required
 
   def index
-    @products = Product.all
+    if params[:category].blank?
+      @products = Product.all
+    else
+      @category_id = Category.find_by(name: params[:categaory]).id
+      @products = Product.where(:category_id => @category_id).order("created_at DESC")
+    end
   end
 
   def new
@@ -29,7 +34,7 @@ class Admin::ProductsController < ApplicationController
   def edit
     @product = Product.find(params[:id])
     @categories = Category.all.map { |c| [c.name, c.id] }
-    @category = Category.find_by(params[:category_id])
+    @category = Category.find_by(name: params[:categaory])
   end
 
   def update

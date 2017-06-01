@@ -16,7 +16,7 @@
 # u.save
 
 products =[{title:"Logitech mouse MT630",
-					category_id: 1,
+					category_id: 3,
 	        description: "The Logitech Ultrathin Touch Mouse T630 is built to complement today's
                         sleek, sophisticated Ultrabook computers. It features a brushed
                         metallic body with a silky-smooth touch surface, and the thin,
