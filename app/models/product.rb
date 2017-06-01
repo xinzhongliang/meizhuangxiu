@@ -2,6 +2,7 @@ class Product < ApplicationRecord
   is_impressionable
   mount_uploader :image, ImageUploader
   belongs_to :category
+  has_many :comments
 
   def publish!
     self.is_hidden = false
