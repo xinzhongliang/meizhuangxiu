@@ -1,0 +1,21 @@
+<div class="panel panel-default">
+  <div class="panel-heading">留言</div>
+  <div class="panel-body">
+    <table class="table table-bordered">
+        <tbody>
+          <% @product.comments.each do |comment| %>
+            <div>
+              <%= simple_format(comment.content) %>
+              <span class="comment-creater">
+              <%= comment.user.email %> 发表于  <%= comment.created_at %>
+                <% if current_user && current_user.admin? %>
+              <%= link_to('删除', product_comment_path(comment.product, comment), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-primary btn-xs") %></td>
+                <% end %>
+              </span>
+            </div>
+            <br>
+          <% end %>
+        </tbody>
+    </table>
+  </div>
+</div>
