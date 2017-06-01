@@ -3,7 +3,7 @@
 
 <%= simple_form_for [@product, @comment] do |comment| %>
 
-<%= comment.input :content, :input_html => { :wrap => :soft, :rows => 6}, :label => '留言内容:', :label_html => { :class => 'type' }   %>
+<%= comment.input :content, :input_html => { :label => '留言内容:' }   %>
 
   <%= comment.submit "确认",  class: "btn btn-primary", data: { disable_with: "Submitting..."}  %>
 <% end %>
