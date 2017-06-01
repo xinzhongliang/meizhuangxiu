@@ -1,4 +1,5 @@
 class Product < ApplicationRecord
+  is_impressionable
   mount_uploader :image, ImageUploader
   belongs_to :category
 
