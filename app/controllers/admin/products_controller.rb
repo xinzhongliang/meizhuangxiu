@@ -29,6 +29,7 @@ class Admin::ProductsController < ApplicationController
   def edit
     @product = Product.find(params[:id])
     @categories = Category.all.map { |c| [c.name, c.id] }
+    @category = Category.find_by(params[:category_id])
   end
 
   def update
