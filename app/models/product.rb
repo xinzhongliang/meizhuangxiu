@@ -13,4 +13,7 @@ class Product < ApplicationRecord
     self.is_hidden = true
     self.save
   end
+
+  validates :category_id, presence: true
+
 end

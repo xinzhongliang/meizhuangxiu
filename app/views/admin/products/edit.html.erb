@@ -26,7 +26,7 @@
   </div>
 
   <div class="group">
-    <%= select_tag(:category_id, options_for_select(@categories), :prompt => "类别")%>
+    <%= select_tag(:category_id, options_for_select(@categories), :prompt => "请选类别")%>
     <span><%= @product.category.name %></span>
   </div>
   <br>
