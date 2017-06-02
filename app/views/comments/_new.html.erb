@@ -3,7 +3,11 @@
 
 <%= simple_form_for [@product, @comment] do |comment| %>
 
-<%= comment.input :content, :input_html => { :label => '留言内容:' }   %>
+  <%= comment.input :content, :input_html => { :label => '留言内容:' }   %>
+  <%= comment.input :image %> <!-- 上傳 -->
+　<%= comment.check_box :remove_image %> <!-- 刪除 -->
+　<%= comment.hidden_field :image_cache %> <!-- 快取 _cache (讓填表時若有誤，不用重新選擇圖片) -->
+　<%= image_tag @comment.image if @comment.image? %> <!-- 如果 user 已有圖片的話，就顯示 -->
 
   <%= comment.submit "确认",  class: "btn btn-primary", data: { disable_with: "Submitting..."}  %>
 <% end %>
