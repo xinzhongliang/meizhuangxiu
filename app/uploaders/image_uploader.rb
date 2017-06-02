@@ -57,4 +57,12 @@ class ImageUploader < CarrierWave::Uploader::Base
     process resize_to_fill: [400, 400]
   end
 
+  version :small do
+    process resize_to_fit: [70, 70]
+  end
+
+  def extension_whitelist
+    %w(jpg jpeg gif png)   #建立文件类型过滤白名单
+  end
+
 end
