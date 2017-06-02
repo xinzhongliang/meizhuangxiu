@@ -38,11 +38,12 @@
             </div>
           <% end %>
           </div>
-        <div class="text-center">
-          <%= will_paginate(@products, renderer: BootstrapPagination::Rails) %>
-        </div>
+
       <% end %>
     </div>
-
   </div>
+</div>
+
+<div class="text-center">
+  <%= will_paginate(@products, renderer: BootstrapPagination::Rails) %>
 </div>
