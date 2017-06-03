@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   root 'products#index'
   namespace :admin do
     resources :categories
+    resources :packs
     resources :products do
       member do
         post :publish
@@ -31,6 +32,7 @@ Rails.application.routes.draw do
     end
     collection do
       get :search
+      get :group
     end
   end
 

@@ -2,6 +2,7 @@ class Product < ApplicationRecord
   is_impressionable
   mount_uploader :image, ImageUploader
   belongs_to :category
+  belongs_to :pack
   has_many :comments
 
   def publish!
@@ -15,5 +16,5 @@ class Product < ApplicationRecord
   end
 
   validates :category_id, presence: true
-
+  validates :pack_id, presence: true
 end

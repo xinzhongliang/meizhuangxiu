@@ -31,6 +31,11 @@
   </div>
   <br>
 
+  <div class="group">
+    <%= select_tag(:pack_id, options_for_select(@packs), :prompt => "请选套餐")%>
+    <span><%= @product.pack.name %></span>
+  </div>
+  <br>
   <%= p.submit "Submit", data: { disable_with: "Submitting..."} %>
 <% end %>
 
