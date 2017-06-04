@@ -24,7 +24,10 @@
   right: 0;
   left: 0;
 }
-
+body {
+  background-color: #000;
+  color: #9E9E9E;
+}
 //----首页背景-----
 .jumbotron {
   background-image:url('http://i1.piimg.com/1949/82461e7c806e2709.jpg');
@@ -72,4 +75,20 @@
   color:#fff;
 }
 
-//----妆容
+//----妆容----
+
+//----推荐商品----
+.button-c {
+  padding-left: 88px;
+  padding-top: 20px;
+}
+.block-title {
+  padding-left: 88px;
+  padding-top: ‒20;
+  padding-top: 20px;
+}
+.introduce-tex {
+  padding-left: 88px;
+  padding-top: 20px;
+  font-size: 28px;
+}
