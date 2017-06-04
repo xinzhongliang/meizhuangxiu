@@ -96,7 +96,7 @@ Rails.application.configure do
     password: ENV["SEND_CLOUD_USER_KEY"]
     }
 
-  if Rails.env.production?
+
     config.cache_store = :dalli_store,
                           (ENV["MEMCACHIER_SERVERS"] || "").split(","),
                           {:username => ENV["MEMCACHIER_USERNAME"],
@@ -106,5 +106,5 @@ Rails.application.configure do
                            :socket_failure_delay => 0.2,
                            :down_retry_delay => 60
                           }
-  end
+
 end
