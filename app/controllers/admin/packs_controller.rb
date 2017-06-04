@@ -27,7 +27,7 @@ class Admin::PacksController < ApplicationController
   def update
     @pack = Pack.find(params[:id])
     if @pack.update(pack_params)
-      redirect_to admin_pack_path
+      redirect_to admin_packs_path
     else
       render :edit
     end
