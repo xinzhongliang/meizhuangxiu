@@ -33,6 +33,7 @@ Rails.application.routes.draw do
     collection do
       get :search
       get :group
+      get :pack
     end
   end
 

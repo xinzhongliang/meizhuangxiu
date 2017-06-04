@@ -27,7 +27,14 @@ class ProductsController < ApplicationController
       flash[:warning] = "该产品已下架."
       redirect_to root_path
     end
+  end
 
+  def group
+    @products = Product.where(:is_hidden => false).order("created_at DESC")
+  end
+
+  def pack
+    @products = Product.where(:is_hidden => false).order("created_at DESC")
   end
 
   def add_to_cart
