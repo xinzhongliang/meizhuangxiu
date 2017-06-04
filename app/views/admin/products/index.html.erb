@@ -16,6 +16,7 @@
       <td widtth="220">图片</td>
       <td>品名</td>
       <td>价格</td>
+      <td>数量</td>
       <td width="100">选项</td>
     </tr>
   </thead>
@@ -41,6 +42,7 @@
       <%= product.title %>
     </td>
     <td><%= product.price %></td>
+    <td><%= product.quantity %></td>
     <td>
       <%= link_to edit_admin_product_path(product), class: "btn btn-xs btn-info" do %><i class="fa fa-pencil"></i><% end %>
       <%= link_to admin_product_path(product), :method => :delete, :class => "btn btn-xs btn-danger", :data => { :confirm => "Are you sure?" } do %> <i class="fa fa-trash-o"></i> <% end %>

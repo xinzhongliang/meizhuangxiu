@@ -43,7 +43,8 @@
     </div>
   </div>
 </div>
-
+<% if @products.present?  %>
 <div class="text-center">
   <%= will_paginate(@products, renderer: BootstrapPagination::Rails) %>
 </div>
+<% end %>

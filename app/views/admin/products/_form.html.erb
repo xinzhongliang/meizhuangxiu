@@ -1,0 +1,36 @@
+<%= simple_form_for [:admin, @product] do |f| %>
+  <div class="group">
+    <%= f.input :title %>
+  </div>
+
+  <div class="group">
+    <%= f.input :description %>
+  </div>
+
+  <div class="group">
+
+  </div>
+
+  <div class="group">
+    <%= select_tag(:category_id, options_for_select(@categories), :prompt => "请选类别")%>
+
+  </div>
+
+  <div class="group">
+     <%= select_tag(:pack_id, options_for_select(@packs), :prompt => "请选套餐")%>
+  </div>
+
+  <div class="group">
+    <%= f.input :quantity %>
+  </div>
+
+  <div class="group">
+    <%= f.input :price %>
+  </div>
+
+  <div>
+    <%= f.input :image, as: :file %>
+  </div>
+
+  <%= f.submit "Submit", data: { disable_with: "Submitting..."} %>
+<% end %>

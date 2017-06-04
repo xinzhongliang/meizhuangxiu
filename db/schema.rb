@@ -37,7 +37,6 @@ ActiveRecord::Schema.define(version: 20170603004930) do
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string   "image"
   end
 
   create_table "impressions", force: :cascade do |t|
@@ -84,13 +83,6 @@ ActiveRecord::Schema.define(version: 20170603004930) do
 
   create_table "packs", force: :cascade do |t|
     t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "photos", force: :cascade do |t|
-    t.integer  "product_id"
-    t.string   "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -3,11 +3,20 @@ class ProductsController < ApplicationController
   before_action :validate_search_key, only: [:search]
 
   def index
-    if params[:category].blank?
+
+
+    if params[:category].blank? && params[:pack].blank?
       @products = Product.where(:is_hidden => false)
-    else
+    elsif params[:pack].blank?
       @category_id = Category.find_by(name: params[:category]).id
       @products = Product.where({:is_hidden => false, :category_id => @category_id})
+    elsif params[:category].blank?
+      @pack_id = Pack.find_by(name: params[:pack]).id
+      @products = Product.where({:is_hidden => false, :pack_id => @pack_id})
+    else
+      @pack_id = Pack.find_by(name: params[:pack]).id
+      @category_id = Category.find_by(name: params[:category]).id
+      @products = Product.where(:is_hidden => false,:pack_id => @pack_id,:category_id => @category_id).order("created_at DESC")
     end
   end
 
@@ -53,16 +62,11 @@ class ProductsController < ApplicationController
 
   end
 
-  private
-
-  def product_params
-    params.require(:product).permit(:title, :description, :price, :quantity, :image, :category_id, :is_hidden)
-  end
 
   private
 
   def product_params
-    params.require(:product).permit(:title, :description, :price, :quantity, :image, :category_id,:pack_id, :is_hidden)
+    params.require(:product).permit(:title, :description, :price, :quantity, :image, :category_id, :pack_id, :is_hidden)
   end
 
 end

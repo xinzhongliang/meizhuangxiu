@@ -6,9 +6,6 @@ class Admin::ProductsController < ApplicationController
   def index
     if params[:category].blank? && params[:pack].blank?
       @products = Product.all
-    elsif
-      @pack_id = Pack.find_by(name: params[:pack]).id
-      @products = Product.where(:pack_id => @pack_id).order("created_at DESC")
     else
       @category_id = Category.find_by(name: params[:categaory]).id
       @products = Product.where(:category_id => @category_id).order("created_at DESC")
@@ -31,14 +28,14 @@ class Admin::ProductsController < ApplicationController
   end
 
   def show
-    @product = Pxroduct.find(params[:id])
+    @product = Product.find(params[:id])
   end
 
   def create
     @product = Product.new(product_params)
     @product.category_id = params[:category_id]
-    @product.Pack_id = params[:pack_id]
-    if @product.save
+    @product.pack_id = params[:pack_id]
+    if @product.save(product_params)
       redirect_to admin_products_path
     else
       render :new
@@ -49,13 +46,13 @@ class Admin::ProductsController < ApplicationController
     @product = Product.find(params[:id])
     @categories = Category.all.map { |c| [c.name, c.id] }
     @packs = Pack.all.map { |c| [c.name, c.id]}
+
   end
 
   def update
     @product = Product.find(params[:id])
-    @categories = Category.all.map { |c| [c.name, c.id] }
-    @packs = Pack.all.map { |c| [c.name, c.id]}
-
+    @product.category_id = params[:category_id]
+    @product.pack_id = params[:pack_id]
     if @product.update(product_params)
       redirect_to admin_products_path
     else

@@ -26,16 +26,18 @@
   </div>
 
   <div class="group">
-    <%= select_tag(:category_id, options_for_select(@categories), :prompt => "请选类别")%>
-    <span><%= @product.category.name %></span>
+    <%= p.input :category_id do %>
+      <%= p.select :category_id, Category.all.map { |c| [c.name, c.id] }, selected: @product.category_id %>
+    <% end %>
   </div>
-  <br>
+
 
   <div class="group">
-    <%= select_tag(:pack_id, options_for_select(@packs), :prompt => "请选套餐")%>
-    <span><%= @product.pack.name %></span>
+    <%= p.input :pack_id do %>
+      <%= p.select :pack_id, Pack.all.map { |p| [p.name, p.id] }, selected: @product.pack_id %>
+    <% end %>
   </div>
-  <br>
+
   <%= p.submit "Submit", data: { disable_with: "Submitting..."} %>
 <% end %>
 
