@@ -101,11 +101,11 @@ ActiveRecord::Schema.define(version: 20170603004930) do
     t.text     "description"
     t.integer  "price"
     t.integer  "quantity"
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
     t.string   "image"
     t.integer  "category_id"
-    t.boolean  "is_hidden",   default: true
+    t.boolean  "is_hidden",   default: false
     t.integer  "pack_id"
   end
 
