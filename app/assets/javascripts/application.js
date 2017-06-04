@@ -15,6 +15,7 @@
 //= require turbolinks
 //= require bootstrap/alert
 //= require bootstrap/dropdown
+//= require bootstrap/modal
 //= require autosize.min
 //= require jquery.countdown.min
 //= require wow.min
