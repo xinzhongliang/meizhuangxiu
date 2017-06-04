@@ -88,7 +88,7 @@ products =[{title:"Logitech mouse MT630",
 
 
 products.each do |ref|
-	Product.create!(title: ref[:title], description: ref[:description], category_id: rand(1..4), pack_id: rand(1..4),
+	Product.create!(title: ref[:title], description: ref[:description], category_id: ref[:category_id], pack_id: ref[:pack_id],
    quantity: rand(30..50), price: rand(100..300),
 	 image: open(ref[:image_path]) )
 end
