@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-md-6">
     <% if @product.image.present? %>
-      <%= image_tag(@product.image.medium.url, class: "thumbnail") %>
+    <%= image_tag(@product.image.medium.url, class: "thumbnail wow fadeInDown") %>
     <% else %>
       <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "thumbnail") %>
     <% end %>
@@ -14,13 +14,34 @@
       </p>
     </div>
     <div> 数量 : <%= @product.quantity %> </div>
-    <div class="product-price"> ￥ <%= @product.price %> </div>
+    <div class="product-price">价格 :  ￥ <%= @product.price %> </div>
     <div class="pull-right">
       <% if @product.quantity.present? && @product.quantity > 0 %>
-        <%= link_to("加入购物车", add_to_cart_product_path(@product), :method => :post, :class => "btn btn-danger btn-lg") %>
+        <%= link_to("加入购物车", add_to_cart_product_path(@product), :method => :comment, :class => "btn btn-danger btn-lg") %>
       <% else %>
         已销售一空，无法购买
       <% end %>
     </div>
+    <div>类别 ：<%= @product.category.name %></div>
   </div>
 </div>
+
+优惠结束倒计时：<div id="getting-started"></div>
+<script type="text/javascript">
+  $("#getting-started")
+  .countdown("2017/06/02", function(event) {
+    $(this).text(
+      event.strftime('%D days %H:%M:%S')
+    );
+  });
+</script>
+
+
+<div class="container-fluid col-md-12 col-centered">
+    <%= render :partial => 'comments/index' %>
+    <%= render :partial => 'comments/new' %>
+</div>
+
+ <script type="text/javascript">
+   autosize($('#comment_content'));
+ </script>

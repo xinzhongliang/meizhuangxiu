@@ -1,0 +1,26 @@
+<h2>套餐列表 </h2>
+
+<div class="pull-right">
+  <%= link_to "新的套餐", new_admin_pack_path, class: "btn btn-primary" %>
+</div>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>名称</th>
+      <th colspan="2">设置</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @packs.each do |pack| %>
+    <tr>
+      <td><%= pack.id %></td>
+      <td><%= pack.name %></td>
+      <td><%= link_to "编辑", edit_admin_pack_path(pack) %></td>
+      <td><%= link_to "删除", admin_pack_path(pack), method: :delete, datea: {confirm: "你确定要删除吗？"} %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

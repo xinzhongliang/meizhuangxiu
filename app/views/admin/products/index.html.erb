@@ -10,18 +10,25 @@
   <h1>Product list</h1>
   <thead>
     <tr>
-      <td>#</td>
+      <td></td>
       <td>类别</td>
+      <td>套餐</td>
       <td widtth="220">图片</td>
       <td>品名</td>
       <td>价格</td>
+      <td>数量</td>
       <td width="100">选项</td>
     </tr>
   </thead>
   <% @products.each do |product| %>
   <tr>
-    <td><%= product.id %></td>
-    <td><%= product.category_id %></td>
+    <td>
+      <%= render_product_status(product) %>
+      <%= link_to(product.title, admin_product_path(product)) %>
+    </td>
+
+    <td><%= product.category.name %></td>
+    <td><%= product.pack.name %></td>
     <td>
       <%= link_to admin_product_path(product) do %>
         <% if product.image.present? %>
@@ -35,9 +42,15 @@
       <%= product.title %>
     </td>
     <td><%= product.price %></td>
+    <td><%= product.quantity %></td>
     <td>
       <%= link_to edit_admin_product_path(product), class: "btn btn-xs btn-info" do %><i class="fa fa-pencil"></i><% end %>
       <%= link_to admin_product_path(product), :method => :delete, :class => "btn btn-xs btn-danger", :data => { :confirm => "Are you sure?" } do %> <i class="fa fa-trash-o"></i> <% end %>
+      <% if product.is_hidden %>
+        <%= link_to publish_admin_product_path(product), :method => :post, :class => "btn btn-xs btn-default" do %><i class="fa fa-eye"></i><% end %>
+      <% else %>
+        <%= link_to hide_admin_product_path(product), :method => :post, :class => "btn btn-xs btn-default" do %><i class="fa fa-eye-slash"></i><% end %>
+      <% end %>
     </td>
   </tr>
   <% end %>

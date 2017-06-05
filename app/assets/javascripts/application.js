@@ -14,10 +14,19 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
-//= require bootstrap/carousel
+//= require bootstrap/alert
+//= require bootstrap/dropdown
+//= require bootstrap/modal
+//= require autosize.min
+//= require jquery.countdown.min
+//= require wow.min
+//= require_tree.
+
+$(document).on("turbolinks:load", function(){
+  new WOW().init();
+  
 $(document).ready(function () {
-  $('#myCarousel').carousel({
-    interval: 2000 //目前是2秒播放一张，可以根据需要调整这个值
-  })
+$('#myCarousel').carousel({
+  interval: 2000 //目前是2秒播放一张，可以根据需要调整这个值
 })
+

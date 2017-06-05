@@ -1,0 +1,111 @@
+
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div id="search-page" class="container-fluid products-show-page">
+      <div class="col-md-10 col-md-offset-1">
+
+        <div class="pull-right">
+          <%= link_to(content_tag(:i, " 查看所有产品", class: "fa fa-reply-all"), products_path) %> |
+          <%= link_to(content_tag(:i, "返回", class: "fa fa-arrow-left"), url_for(:back)) %>
+        </div>
+    </div>
+    <div>
+    </div>
+  </div>
+
+  <div class="row">
+    <h2>苹果系列 </h2>
+    <% @products.where(:pack_id =>  1).each do |product| %>
+      <div class="col-xs-6 col-md-3">
+        <%= link_to product_path(product) do %>
+          <% if product.image.present? %>
+            <%= image_tag(product.image.thumb.url, class: "thumbnail") %>
+          <% else %>
+            <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
+          <% end %>
+        <% end %>
+        <%= product.title %> ￥ <%= product.price %>
+        <br>
+        总浏览量: <%= product.impressionist_count(:filter=>:session_hash) %>
+      </div>
+    <% end %>
+  </div>
+<hr>
+  <div class="row">
+    <h2>草莓系列 </h2>
+
+    <% @products.where(:pack_id =>  2).each do |product| %>
+      <div class="col-xs-6 col-md-3">
+        <%= link_to product_path(product) do %>
+          <% if product.image.present? %>
+            <%= image_tag(product.image.thumb.url, class: "thumbnail") %>
+          <% else %>
+            <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
+          <% end %>
+        <% end %>
+        <%= product.title %> ￥ <%= product.price %>
+        <br>
+        总浏览量: <%= product.impressionist_count(:filter=>:session_hash) %>
+      </div>
+    <% end %>
+  </div>
+  <hr>
+    <div class="row">
+      <h2>桃子系列 </h2>
+
+      <% @products.where(:pack_id =>  3).each do |product| %>
+        <div class="col-xs-6 col-md-3">
+          <%= link_to product_path(product) do %>
+            <% if product.image.present? %>
+              <%= image_tag(product.image.thumb.url, class: "thumbnail") %>
+            <% else %>
+              <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
+            <% end %>
+          <% end %>
+          <%= product.title %> ￥ <%= product.price %>
+          <br>
+          总浏览量: <%= product.impressionist_count(:filter=>:session_hash) %>
+        </div>
+      <% end %>
+    </div>
+    <hr>
+      <div class="row">
+        <h2>芒果系列 </h2>
+
+        <% @products.where(:pack_id =>  4).each do |product| %>
+          <div class="col-xs-6 col-md-3">
+            <%= link_to product_path(product) do %>
+              <% if product.image.present? %>
+                <%= image_tag(product.image.thumb.url, class: "thumbnail") %>
+              <% else %>
+                <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
+              <% end %>
+            <% end %>
+            <%= product.title %> ￥ <%= product.price %>
+            <br>
+            总浏览量: <%= product.impressionist_count(:filter=>:session_hash) %>
+          </div>
+        <% end %>
+      </div>
+
+      <hr>
+        <div class="row">
+          <h2>樱桃系列 </h2>
+
+          <% @products.where(:pack_id =>  5).each do |product| %>
+            <div class="col-xs-6 col-md-3">
+              <%= link_to product_path(product) do %>
+                <% if product.image.present? %>
+                  <%= image_tag(product.image.thumb.url, class: "thumbnail") %>
+                <% else %>
+                  <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
+                <% end %>
+              <% end %>
+              <%= product.title %> ￥ <%= product.price %>
+              <br>
+              总浏览量: <%= product.impressionist_count(:filter=>:session_hash) %>
+            </div>
+          <% end %>
+        </div>
+</div>

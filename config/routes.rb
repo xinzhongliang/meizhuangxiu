@@ -1,10 +1,20 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :user, controllers: {
+    passwords: 'users/passwords',
+    registrations: 'users/registrations',
+    sessions: 'users/sessions'
+  }
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root 'welcome#index'
+  root 'products#index'
   namespace :admin do
     resources :categories
-    resources :products
+    resources :packs
+    resources :products do
+      member do
+        post :publish
+        post :hide
+      end
+    end
     resources :orders do
       member do
         post :cancel
@@ -16,11 +26,14 @@ Rails.application.routes.draw do
   end
 
   resources :products do
+    resources :comments
     member do
       post :add_to_cart
     end
     collection do
       get :search
+      get :group
+      get :pack
     end
   end
 
