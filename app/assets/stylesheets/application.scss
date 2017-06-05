@@ -17,28 +17,49 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
+@import url('https://fonts.googleapis.com/earlyaccess/notosanssc.css');
 
-.navbar-fixed-top,
-.navbar-fixed-bottom {
-  position: fixed; /* <-- Look here */
-  right: 0;
-  left: 0;
+body {
+     font-family: 'Noto Sans SC', sans-serif;            // google思源黑简作为主字体
+     color: #666;                                        // 修改全站的字体主色 压低亮度
+     }
+
+.search-bar {
+
+         padding-top: 5px;
+         padding-right: 20px;
+         height: 60px;
+        font-size: 24px;
+       }
+
+.navbar-default {
+    background-color: #000000;
+    border-color: #020202;
+    height: 62px;
+    margin-bottom: 0px;
 }
 body {
   background-color: #000;
   color: #9E9E9E;
 }
 //----首页背景-----
-.jumbotron {
+// .jumbotron {
+//   background-image:url('http://i1.piimg.com/1949/82461e7c806e2709.jpg');
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   padding-bottom: 110px;
+// }
+.container-fluid .jumbotron{
   background-image:url('http://i1.piimg.com/1949/82461e7c806e2709.jpg');
   background-repeat: no-repeat;
-  background-size: cover;
-  padding-bottom: 110px;
+  padding-bottom: 73px;//内部的底部边距，这样按钮不会很靠近底部了
+  margin: 0 -15px 20px;//顶部margin为0，因此可以直接接着导航栏；左右margin为负15，因此可以顶到浏览器的边缘（抵消 container-fluid 的 15px 左右padding);底部margin为20，会跟下面的内容撑开距离
+  border-radius: 0;//圆角为0
 }
 
-.title {
-  font-family: "Helvetica Neue", "Microsoft Yahei", 微软雅黑;
-  text-align: center;
+.jumbotron .title {
+  // font-family: "Helvetica Neue", "Microsoft Yahei", 微软雅黑;
+  text-align: left;
   margin-top: 200px;
   margin-bottom: 80px;
 }
@@ -46,14 +67,14 @@ body {
 .slogan {
   margin-top: 10px;
   margin-bottom: 50px;
-  text-align: center;
+  text-align: left;
   color: white;
   top: 12px;
 }
 
 .lead {
   margin-bottom: 60px;
-  text-align: center;
+  text-align: left;
   color: white;
 }
 //----图片轮播------
@@ -97,16 +118,16 @@ body {
 }
 
 //----彩妆大师---
-.section-referrer {
-    padding-left: 60px;
+.team-player {
+    padding-left: 155px;
     padding-top: 0px;
   }
 
-.title {
-    margin-top: 80px;
-    margin-bottom: 30px;
-  }
-  
+// .title {
+//     margin-top: 20px;
+//     margin-bottom: 30px;
+//   }
+
 .team {
   padding-left: 90px;
 }
