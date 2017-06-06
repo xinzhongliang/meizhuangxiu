@@ -21,6 +21,7 @@
 //= require autosize.min
 //= require jquery.countdown.min
 //= require wow.min
+//= require bootstrap/carousel
 //= require_tree.
 
 $(document).on("turbolinks:load", function(){
