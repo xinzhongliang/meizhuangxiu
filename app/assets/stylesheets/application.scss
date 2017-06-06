@@ -48,15 +48,25 @@
 body {
      font-family: 'Noto Sans SC', sans-serif;            // google思源黑简作为主字体
      color: #666;                                        // 修改全站的字体主色 压低亮度
+     position: relative;
+     margin-bottom: 100px; /* 一定要和footer的高度一致 */
+     min-height: 100%;
      }
 
+ footer {
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+   height: 30px;
+   margin-bottom: -100px;
+   z-index: 1000 /* 确保页面滑动的时候，字体不会从上面滑下去 */
+ }
 .search-bar {
-
-         padding-top: 5px;
-         padding-right: 20px;
-         height: 60px;
-        font-size: 24px;
-       }
+   padding-top: 5px;
+   padding-right: 20px;
+   height: 60px;
+  font-size: 24px;
+ }
 
 .navbar-default {
     background-color: #000000;
@@ -182,10 +192,36 @@ body {
 }
 
 //----彩妆大师---
+.master-page-mid
+.landing-page-mid {
+  float: none;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+
 .team-player {
-    padding-left: 155px;
+    margin-left: 0;
+    padding-left: 25px;
+    padding-right: 25px;
     padding-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
   }
+
+  .team-player ul {
+    font-size: 13px;
+  	list-style-type: none;
+  	margin-left: 0;
+  	padding-left: 0;
+    padding-right: 35px;
+  	margin-top: 15px;
+    }
 
 // .title {
 //     margin-top: 20px;
@@ -195,6 +231,9 @@ body {
 .team {
   padding-left: 90px;
 }
+
+
+
 
 /****** LOGIN MODAL ******/
 .loginmodal-container {
