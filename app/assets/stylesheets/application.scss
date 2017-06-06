@@ -47,7 +47,8 @@
 
 body {
      font-family: 'Noto Sans SC', sans-serif;            // google思源黑简作为主字体
-     color: #666;                                        // 修改全站的字体主色 压低亮度
+     color: #9E9E9E;                                        // 修改全站的字体主色 压低亮度
+     background-color: #000;
      position: relative;
      margin-bottom: 100px; /* 一定要和footer的高度一致 */
      min-height: 100%;
@@ -79,10 +80,6 @@ body {
   color: #ff5722;
 }
 
-body {
-  background-color: #000;
-  color: #9E9E9E;
-}
 
 
 .dropdown {
@@ -183,7 +180,7 @@ body {
 }
 .outside {
 width: 100%;
- height: 80%;
+ height: 100%;
  background-position: center;
  -webkit-background-size: cover;
  -moz-background-size: cover;
@@ -191,8 +188,8 @@ width: 100%;
  -o-background-size: cover;
 }
 .follow {
-width: 45%;
- height: 45%;
+width: 50%;
+ height: 50%;
  background-position: center;
  -webkit-background-size: cover;
  -moz-background-size: cover;
