@@ -127,8 +127,14 @@ body {
   background-image:url('http://i1.piimg.com/1949/82461e7c806e2709.jpg');
   background-repeat: no-repeat;
   padding-bottom: 73px;//内部的底部边距，这样按钮不会很靠近底部了
-  margin: 0 -15px 20px;//顶部margin为0，因此可以直接接着导航栏；左右margin为负15，因此可以顶到浏览器的边缘（抵消 container-fluid 的 15px 左右padding);底部margin为20，会跟下面的内容撑开距离
+  margin: auto;//顶部margin为0，因此可以直接接着导航栏；左右margin为负15，因此可以顶到浏览器的边缘（抵消 container-fluid 的 15px 左右padding);底部margin为20，会跟下面的内容撑开距离
   border-radius: 0;//圆角为0
+}
+
+.center-block {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .jumbotron .title {
@@ -152,16 +158,48 @@ body {
   color: white;
 }
 //----图片轮播------
-.tagline {
-  letter-spacing: 3px;
+// .tagline {
+//   letter-spacing: 3px;
+// }
+// .carousel {
+//   width: 1200px;
+//   margin: 0 auto;
+// }
+// .carousel .item {
+//   height: 375px;
+// }
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+.carousel,
+.item,
+.active {
+    height: 100%;
+    margin-bottom: 60px;
 }
-.carousel {
-  width: 1200px;
-  margin: 0 auto;
+
+.carousel-inner {
+    height: 100%;
 }
-.carousel .item {
-  height: 375px;
+.outside {
+width: 100%;
+ height: 80%;
+ background-position: center;
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ background-size: cover;
+ -o-background-size: cover;
 }
+.follow {
+width: 45%;
+ height: 45%;
+ background-position: center;
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ background-size: cover;
+ -o-background-size: cover;
+}
+
 .about {
   position:absolute;
   top:70px;
@@ -207,8 +245,8 @@ body {
 
 .team-player {
     margin-left: 0;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
     padding-top: 0px;
     margin-left: auto;
     margin-right: auto;
@@ -229,11 +267,23 @@ body {
 //   }
 
 .team {
+  padding-bottom: 90px;
+  margin-bottom: 90;
+}
+
+.box {
+  padding-left: 90px;
+  display:inline-block;
+  width:auto;
+}
+.content {
   padding-left: 90px;
 }
 
-
-
+.img {
+  width: 100%;
+  float: center;
+}
 
 /****** LOGIN MODAL ******/
 .loginmodal-container {
@@ -339,4 +389,57 @@ body {
       background-size: cover;
 
       margin-bottom: 50px;
+}
+
+
+// ----分类页面可分类查看-----
+.gallery-title
+{
+    font-size: 36px;
+    color: #42B32F;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 70px;
+}
+.gallery-title:after {
+    content: "";
+    position: absolute;
+    width: 12.5%;
+    left: 46.5%;
+    height: 45px;
+}
+.filter-button
+{
+    font-size: 18px;
+    border: 1px solid #42B32F;
+    border-radius: 5px;
+    text-align: center;
+    color: #42B32F;
+    margin-bottom: 30px;
+
+}
+.filter-button:hover
+{
+    font-size: 18px;
+    border: 1px solid #42B32F;
+    border-radius: 5px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #42B32F;
+
+}
+.btn-default:active .filter-button:active
+{
+    background-color: #42B32F;
+    color: white;
+}
+
+.port-image
+{
+    width: 100%;
+}
+
+.gallery_product
+{
+    margin-bottom: 30px;
 }
