@@ -32,10 +32,11 @@ $(document).on("turbolinks:load", function(){
 //   })
 //   })
 
-// $(document).on("turbolinks:load", function () {
-// $('#myCarousel').carousel({
-//   interval: 1500 //目前是1.5秒播放一张，可以根据需要调整这个值
-// })
+$(document).on("turbolinks:load", function () {
+$('#myCarousel').carousel({
+  interval: 1500 //目前是1.5秒播放一张，可以根据需要调整这个值
+})
+
 
 $(document).on("turbolinks:load", function(){
 
