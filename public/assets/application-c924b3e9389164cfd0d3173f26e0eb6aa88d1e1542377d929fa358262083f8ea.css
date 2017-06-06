@@ -12587,14 +12587,15 @@ button.close {
 /* line 49, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
 body {
   font-family: 'Noto Sans SC', sans-serif;
-  color: #666;
+  color: #9E9E9E;
+  background-color: #000;
   position: relative;
   margin-bottom: 100px;
   /* 一定要和footer的高度一致 */
   min-height: 100%;
 }
 
-/* line 57, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
+/* line 58, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
 footer {
   position: absolute;
   bottom: 0;
@@ -12604,7 +12605,7 @@ footer {
   z-index: 1000;
 }
 
-/* line 65, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
+/* line 66, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
 .search-bar {
   padding-top: 5px;
   padding-right: 20px;
@@ -12612,7 +12613,7 @@ footer {
   font-size: 24px;
 }
 
-/* line 72, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
+/* line 73, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
 .navbar-default {
   background-color: #000000;
   border-color: #020202;
@@ -12620,40 +12621,34 @@ footer {
   margin-bottom: 0px;
 }
 
-/* line 79, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
+/* line 80, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
 .navbar-nav > li > a:hover {
   color: #ff5722;
 }
 
-/* line 83, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
-body {
-  background-color: #000;
-  color: #9E9E9E;
-}
-
-/* line 89, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
+/* line 86, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
 .dropdown {
   position: relative;
   display: inline-block;
   margin-bottom: 0px;
 }
 
-/* line 95, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
+/* line 92, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
 .dropdown:hover {
   background-color: #FF5722;
 }
 
-/* line 99, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
+/* line 96, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
 .dropdown:hover .links {
   color: #FF5722;
 }
 
-/* line 103, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
+/* line 100, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
 .dropdown:hover .dropdown-menu {
   display: block;
 }
 
-/* line 107, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
+/* line 104, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
 .dropdown .dropdown-menu {
   position: absolute;
   top: 100%;
@@ -12668,23 +12663,30 @@ body {
   padding: 0px;
 }
 
-/* line 127, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
+/* line 124, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
 .container-fluid .jumbotron {
   background-image: url("http://i1.piimg.com/1949/82461e7c806e2709.jpg");
   background-repeat: no-repeat;
   padding-bottom: 73px;
-  margin: 0 -15px 20px;
+  margin: auto;
   border-radius: 0;
 }
 
-/* line 135, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
+/* line 132, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
+.center-block {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 138, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
 .jumbotron .title {
   text-align: left;
   margin-top: 200px;
   margin-bottom: 80px;
 }
 
-/* line 142, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
+/* line 145, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
 .slogan {
   margin-top: 10px;
   margin-bottom: 50px;
@@ -12693,30 +12695,51 @@ body {
   top: 12px;
 }
 
-/* line 150, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
+/* line 153, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
 .lead {
   margin-bottom: 60px;
   text-align: left;
   color: white;
 }
 
-/* line 156, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
-.tagline {
-  letter-spacing: 3px;
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+/* line 172, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
+.carousel,
+.item,
+.active {
+  height: 100%;
+  margin-bottom: 60px;
 }
 
-/* line 159, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
-.carousel {
-  width: 1200px;
-  margin: 0 auto;
+/* line 179, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
+.carousel-inner {
+  height: 100%;
 }
 
-/* line 163, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
-.carousel .item {
-  height: 375px;
+/* line 182, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
+.outside {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
 }
 
-/* line 166, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
+/* line 191, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
+.follow {
+  width: 50%;
+  height: 50%;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+/* line 201, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
 .about {
   position: absolute;
   top: 70px;
@@ -12728,27 +12751,27 @@ body {
   color: #fff;
 }
 
-/* line 180, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
+/* line 215, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
 .button-c {
   padding-left: 88px;
   padding-top: 20px;
 }
 
-/* line 184, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
+/* line 219, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
 .block-title {
   padding-left: 88px;
   padding-top: ‒20;
   padding-top: 20px;
 }
 
-/* line 189, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
+/* line 224, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
 .introduce-tex {
   padding-left: 88px;
   padding-top: 20px;
   font-size: 28px;
 }
 
-/* line 196, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
+/* line 231, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
 .master-page-mid
 .landing-page-mid {
   float: none;
@@ -12756,23 +12779,23 @@ body {
   margin-top: 15px;
 }
 
-/* line 203, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
+/* line 238, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
 .col-centered {
   float: none;
   margin: 0 auto;
 }
 
-/* line 209, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
+/* line 244, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
 .team-player {
   margin-left: 0;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-left: 15px;
+  padding-right: 15px;
   padding-top: 0px;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 218, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
+/* line 253, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
 .team-player ul {
   font-size: 13px;
   list-style-type: none;
@@ -12782,13 +12805,32 @@ body {
   margin-top: 15px;
 }
 
-/* line 232, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
+/* line 267, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
 .team {
+  padding-bottom: 90px;
+  margin-bottom: 90;
+}
+
+/* line 272, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
+.box {
+  padding-left: 90px;
+  display: inline-block;
+  width: auto;
+}
+
+/* line 277, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
+.content {
   padding-left: 90px;
 }
 
+/* line 281, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
+.img {
+  width: 100%;
+  float: center;
+}
+
 /****** LOGIN MODAL ******/
-/* line 240, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
+/* line 287, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
 .loginmodal-container {
   padding: 30px;
   max-width: 350px;
@@ -12801,14 +12843,14 @@ body {
   font-family: roboto;
 }
 
-/* line 252, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
+/* line 299, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
 .loginmodal-container h1 {
   text-align: center;
   font-size: 1.8em;
   font-family: roboto;
 }
 
-/* line 258, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
+/* line 305, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
 .loginmodal-container input[type=submit] {
   width: 100%;
   display: block;
@@ -12816,7 +12858,7 @@ body {
   position: relative;
 }
 
-/* line 265, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
+/* line 312, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
 .loginmodal-container input[type=text], input[type=password] {
   height: 44px;
   font-size: 16px;
@@ -12832,7 +12874,7 @@ body {
   -moz-box-sizing: border-box;
 }
 
-/* line 280, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
+/* line 327, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
 .loginmodal-container input[type=text]:hover, input[type=password]:hover {
   border: 1px solid #b9b9b9;
   border-top: 1px solid #a0a0a0;
@@ -12841,7 +12883,7 @@ body {
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-/* line 288, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
+/* line 335, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
 .loginmodal {
   text-align: center;
   font-size: 14px;
@@ -12854,7 +12896,7 @@ body {
     user-select: none; */
 }
 
-/* line 300, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
+/* line 347, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
 .loginmodal-submit {
   /* border: 1px solid #3079ed; */
   border: 0px;
@@ -12867,7 +12909,7 @@ body {
   /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#4787ed)); */
 }
 
-/* line 312, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
+/* line 359, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
 .loginmodal-submit:hover {
   /* border: 1px solid #2f5bb7; */
   border: 0px;
@@ -12876,7 +12918,7 @@ body {
   /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#357ae8)); */
 }
 
-/* line 320, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
+/* line 367, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
 .loginmodal-container a {
   text-decoration: none;
   color: #666;
@@ -12887,15 +12929,69 @@ body {
   transition: opacity ease 0.5s;
 }
 
-/* line 330, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
+/* line 377, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
 .login-help {
   font-size: 12px;
 }
 
-/* line 334, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
+/* line 381, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
 .facepanel {
   background-image: url(/images/header.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 50px;
+}
+
+/* line 394, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
+.gallery-title {
+  font-size: 36px;
+  color: #42B32F;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 70px;
+}
+
+/* line 402, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
+.gallery-title:after {
+  content: "";
+  position: absolute;
+  width: 12.5%;
+  left: 46.5%;
+  height: 45px;
+}
+
+/* line 409, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
+.filter-button {
+  font-size: 18px;
+  border: 1px solid #42B32F;
+  border-radius: 5px;
+  text-align: center;
+  color: #42B32F;
+  margin-bottom: 30px;
+}
+
+/* line 419, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
+.filter-button:hover {
+  font-size: 18px;
+  border: 1px solid #42B32F;
+  border-radius: 5px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #42B32F;
+}
+
+/* line 429, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
+.btn-default:active .filter-button:active {
+  background-color: #42B32F;
+  color: white;
+}
+
+/* line 435, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
+.port-image {
+  width: 100%;
+}
+
+/* line 440, /Users/liangxinzhong/meizhuangxiu/app/assets/stylesheets/application.scss */
+.gallery_product {
+  margin-bottom: 30px;
 }
