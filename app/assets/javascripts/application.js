@@ -26,12 +26,12 @@
 $(document).on("turbolinks:load", function(){
   new WOW().init();
 
-$(document).ready(function () {
+$(document).on(function () {
 $('#myCarousel').carousel({
   interval: 1500 //目前是1.5秒播放一张，可以根据需要调整这个值
 })
 
-$(document).ready(function(){
+$(document).on(function(){
 
     $(".filter-button").click(function(){
         var value = $(this).attr('data-filter');
