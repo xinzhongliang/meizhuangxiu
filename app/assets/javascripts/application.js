@@ -10,10 +10,9 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 
-//= require bootstrap
 //= require jquery
+//= require bootstrap
 //= require jquery_ujs
-//= require turbolinks
 //= require bootstrap/alert
 //= require bootstrap/dropdown
 //= require bootstrap/modal
@@ -21,39 +20,18 @@
 //= require autosize.min
 //= require jquery.countdown.min
 //= require wow.min
+//= require bootstrap/carousel
 //= require_tree.
 
 $(document).on("turbolinks:load", function(){
   new WOW().init();
+});
 
-$(document).ready(function () {
+
+//目前是1.5秒播放一张，可以根据需要调整这个值
+
+$(document).on("turbolinks:load", function () {
 $('#myCarousel').carousel({
-  interval: 1500 //目前是1.5秒播放一张，可以根据需要调整这个值
-})
-
-$(document).ready(function(){
-
-    $(".filter-button").click(function(){
-        var value = $(this).attr('data-filter');
-
-        if(value == "all")
-        {
-            //$('.filter').removeClass('hidden');
-            $('.filter').show('1000');
-        }
-        else
-        {
-           $('.filter[filter-item="'+value+'"]').removeClass('hidden');
-           $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
-            // $(".filter").not('.'+value).hide('3000');
-            // $('.filter').filter('.'+value).show('3000');
-
-        }
-    });
-
-    if ($(".filter-button").removeClass("active")) {
-        $(this).removeClass("active");
-        }
-  $(this).addClass("active");
-
+  interval: 1500
+});
 });
