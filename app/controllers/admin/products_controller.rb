@@ -6,12 +6,9 @@ class Admin::ProductsController < ApplicationController
   def index
     if params[:category].blank? && params[:pack].blank?
       @products = Product.all
-    elsif
-      @pack_id = Pack.find_by(name: params[:pack]).id
-      @products = Product.where(:pack_id => @pack_id).order("created_at DESC")
     else
-      @category_id = Category.find_by(name: params[:categaory]).id
-      @products = Product.where(:category_id => @category_id).order("created_at DESC")
+      @category_id = Category.find_by(name: params[:category]).id
+      @products = Product.where(:is_hidden => false,:pack_id => @pack_id,:category_id => @category_id).order("created_at DESC")
     end
   end
 
