@@ -10,23 +10,27 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 
-//= require bootstrap
 //= require jquery
+//= require bootstrap
 //= require jquery_ujs
-//= require turbolinks
 //= require bootstrap/alert
 //= require bootstrap/dropdown
-//= require bootstrap/modal
 //= require bootstrap/carousel
 //= require autosize.min
 //= require jquery.countdown.min
 //= require wow.min
+//= require bootstrap/carousel
 //= require_tree.
 
 $(document).on("turbolinks:load", function(){
   new WOW().init();
+});
 
-$(document).ready(function () {
+
+//目前是1.5秒播放一张，可以根据需要调整这个值
+
+$(document).on("turbolinks:load", function () {
 $('#myCarousel').carousel({
-  interval: 2000 //目前是2秒播放一张，可以根据需要调整这个值
-})
+  interval: 1500
+});
+});
