@@ -87,7 +87,7 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   ActionMailer::Base.smtp_settings = {
-    address: "smtpcloud.sohu.com",
+    address: "smtpdm.aliyun.com",
     port: 25,
     domain: "heroku.com",
     authentication: "login",
