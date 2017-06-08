@@ -1,27 +1,27 @@
-# 
-# u = User.create([ email: 'admin@test.com' ,  password: '123456' ,password_confirmation:'123456',is_admin:true])
-# puts "created an admin user"
-#
-# categories = [ {name: "彩妆"}, {name: "眼妆"}, {name: "底妆"}, {name: "唇妆"} , {name: "粉底"}]
-#
-# categories.each do |c|
-# Category.create!( name: c[:name])
-# end
-# puts "create categories"
-#
-#
-# packs = [ {name: "烟熏妆"}, {name: "职场妆"}, {name: "派对妆"}, {name: "桃花妆"},  {name: "梦幻妆"}, {name: "夏威夷"}, {name: "香格里拉"}, {name: "普罗旺斯"}]
-#
-# packs.each do |p|
-# 	Pack.create!( name: p[:name])
-# end
-# puts "create packs"
+
+u = User.create([ email: 'admin@test.com' ,  password: '123456' ,password_confirmation:'123456',is_admin:true])
+puts "created an admin user"
+
+categories = [ {name: "彩妆"}, {name: "眼妆"}, {name: "底妆"}, {name: "唇妆"} , {name: "粉底"}]
+
+categories.each do |c|
+Category.create!( name: c[:name])
+end
+puts "create categories"
+
+
+packs = [ {name: "烟熏妆"}, {name: "职场妆"}, {name: "派对妆"}, {name: "桃花妆"},  {name: "梦幻妆"}, {name: "夏威夷"}, {name: "香格里拉"}, {name: "普罗旺斯"}]
+
+packs.each do |p|
+	Pack.create!( name: p[:name])
+end
+puts "create packs"
 
 
 products =[
 	# {title:"彩妆1号",category_id: 1,pack_id: 1,description: "樱桃彩妆", image_path: "http://oqecjavzf.bkt.clouddn.com/%E5%BD%A9%E5%A6%861%23.jpg"},
 	{title: "彩妆2号",category_id: 1,pack_id: 2,description: "草莓彩妆",image_path: "http://oqecjavzf.bkt.clouddn.com/%E5%BD%A9%E5%A6%862%23.jpg"},
-	{title: "彩妆3号",category_id: 1,pack_id: 3,description: "苹果彩妆",image_path: "http://oqecjavzf.bkt.clouddn.com/%E5%BD%A9%E5%A6%863%23.jpg"},
+	# {title: "彩妆3号",category_id: 1,pack_id: 3,description: "苹果彩妆",image_path: "http://oqecjavzf.bkt.clouddn.com/%E5%BD%A9%E5%A6%863%23.jpg"},
 	{title: "Nars大地色眼影盘",category_id: 1,pack_id: 4,description: "眼影盘",price: 680,image_path: "http://oqecjavzf.bkt.clouddn.com/Nars%E5%A4%A7%E5%9C%B0%E8%89%B2%E7%9C%BC%E5%BD%B1%E7%9B%98.jpg"},
 	# {title: "彩妆5号",category_id: 1,pack_id: 5,description: "苹果彩妆",image_path: "http://oqecjavzf.bkt.clouddn.com/%E5%BD%A9%E5%A6%865%23.jpg"},
 	{title: "彩妆6号",category_id: 1,pack_id: 6,description: "芒果彩妆",image_path: "http://oqecjavzf.bkt.clouddn.com/%E5%BD%A9%E5%A6%866%23.jpg"},
