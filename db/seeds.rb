@@ -31,7 +31,7 @@ products =[
 	{title: "眼妆2号",category_id: 2,pack_id: 2,description: "草莓眼妆",image_path: "http://oqecjavzf.bkt.clouddn.com/%E7%9C%BC%E5%A6%862%23.jpg"},
 	{title: "眼妆3号",category_id: 2,pack_id: 3,description: "杨桃眼妆",image_path: "http://oqecjavzf.bkt.clouddn.com/%E7%9C%BC%E5%A6%863%23.jpg"},
 	{title: "眼妆4号",category_id: 2,pack_id: 4,description: "芒果眼妆",image_path: "http://oqecjavzf.bkt.clouddn.com/%E7%9C%BC%E5%A6%864%23.jpg"},
-	{title: "Nars丝绒眼线胶笔",category_id: 2,pack_id: 5,description: "眼线胶笔",price: 320,image_path: "http://oqecjavzf.bkt.clouddn.com/Nars%E4%B8%9D%E7%BB%92%E7%9C%BC%E7%BA%BF%E8%83%B6%E7%AC%94.jpg"},
+	# {title: "Nars丝绒眼线胶笔",category_id: 2,pack_id: 5,description: "眼线胶笔",price: 320,image_path: "http://oqecjavzf.bkt.clouddn.com/Nars%E4%B8%9D%E7%BB%92%E7%9C%BC%E7%BA%BF%E8%83%B6%E7%AC%94.jpg"},
 	{title: "眼妆6号",category_id: 2,pack_id: 6,description: "蜜桃眼妆",image_path: "http://oqecjavzf.bkt.clouddn.com/%E7%9C%BC%E5%A6%866%23.jpg"},
 	{title: "眼妆7号",category_id: 2,pack_id: 7,description: "石榴眼妆",image_path: "http://oqecjavzf.bkt.clouddn.com/%E7%9C%BC%E5%A6%867%23.jpeg"},
 	{title: "眼妆8号",category_id: 2,pack_id: 8,description: "橘子眼妆",image_path: "http://oqecjavzf.bkt.clouddn.com/%E7%9C%BC%E5%A6%868%23.jpg"},
