@@ -61,6 +61,4 @@ class ImageUploader < CarrierWave::Uploader::Base
     process resize_to_fill: [400, 400]
   end
 
-  config.qiniu_can_overwrite = true
-
 end

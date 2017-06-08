@@ -1,4 +1,4 @@
-# 
+#
 # u = User.create([ email: 'admin@test.com' ,  password: '123456' ,password_confirmation:'123456',is_admin:true])
 # puts "created an admin user"
 #
@@ -67,9 +67,7 @@ products =[
 
 
 products.each do |ref|
-	Product.create!(title: ref[:title], description: ref[:description], category_id: ref[:category_id], pack_id: ref[:pack_id],
-   quantity: rand(300..500), price: rand(200..600).to_i,
-	 image: open(ref[:image_path]) )
+	Product.create!(title: ref[:title], description: ref[:description], category_id: ref[:category_id], pack_id: ref[:pack_id],quantity: rand(300..500), price: rand(200..600).to_i,image: open(ref[:image_path]) )
 	end
 
 puts "create products"
