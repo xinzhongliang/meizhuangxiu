@@ -19,7 +19,7 @@ puts "create packs"
 
 
 products =[
-	{title:"彩妆1号",category_id: 1,pack_id: 1,description: "樱桃彩妆", image_path: "http://oqecjavzf.bkt.clouddn.com/%E5%BD%A9%E5%A6%861%23.jpg"},
+	# {title:"彩妆1号",category_id: 1,pack_id: 1,description: "樱桃彩妆", image_path: "http://oqecjavzf.bkt.clouddn.com/%E5%BD%A9%E5%A6%861%23.jpg"},
 	{title: "彩妆2号",category_id: 1,pack_id: 2,description: "草莓彩妆",image_path: "http://oqecjavzf.bkt.clouddn.com/%E5%BD%A9%E5%A6%862%23.jpg"},
 	{title: "彩妆3号",category_id: 1,pack_id: 3,description: "苹果彩妆",image_path: "http://oqecjavzf.bkt.clouddn.com/%E5%BD%A9%E5%A6%863%23.jpg"},
 	{title: "Nars大地色眼影盘",category_id: 1,pack_id: 4,description: "眼影盘",price: 680,image_path: "http://oqecjavzf.bkt.clouddn.com/Nars%E5%A4%A7%E5%9C%B0%E8%89%B2%E7%9C%BC%E5%BD%B1%E7%9B%98.jpg"},
