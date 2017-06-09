@@ -62,8 +62,9 @@ Rails.application.configure do
     domain: "heroku.com",
     openssl_verify_mode: 'none',
     authentication: "login",
-    enable_starttls_auto: true,
+    enable_starttls_auto: false,
     user_name: ENV["ALI_CLOUD_USER_NAME"],
-    password: ENV["ALI_CLOUD_USER_KEY"]
+    password: ENV["ALI_CLOUD_USER_KEY"],
+    raise_delivery_errors: true,
     }
 end
