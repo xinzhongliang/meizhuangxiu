@@ -58,7 +58,7 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   ActionMailer::Base.smtp_settings = {
     address: "smtpdm.aliyun.com",
-    port: 80,
+    port: 25,
     domain: "heroku.com",
     openssl_verify_mode: 'none',
     authentication: "login",
