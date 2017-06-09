@@ -1,21 +1,21 @@
+# #
+# u = User.create([ email: 'admin@test.com' ,  password: '123456' ,password_confirmation:'123456',is_admin:true])
+# puts "created an admin user"
 #
-u = User.create([ email: 'admin@test.com' ,  password: '123456' ,password_confirmation:'123456',is_admin:true])
-puts "created an admin user"
-
-categories = [ {name: "彩妆"}, {name: "眼妆"}, {name: "底妆"}, {name: "唇妆"} , {name: "粉底"}]
-
-categories.each do |c|
-Category.create!( name: c[:name])
-end
-puts "create categories"
-
-
-packs = [ {name: "烟熏妆"}, {name: "职场妆"}, {name: "派对妆"}, {name: "桃花妆"},  {name: "梦幻妆"}, {name: "夏威夷"}, {name: "香格里拉"}, {name: "普罗旺斯"}]
-
-packs.each do |p|
-	Pack.create!( name: p[:name])
-end
-puts "create packs"
+# categories = [ {name: "彩妆"}, {name: "眼妆"}, {name: "底妆"}, {name: "唇妆"} , {name: "粉底"}]
+#
+# categories.each do |c|
+# Category.create!( name: c[:name])
+# end
+# puts "create categories"
+#
+#
+# packs = [ {name: "烟熏妆"}, {name: "职场妆"}, {name: "派对妆"}, {name: "桃花妆"},  {name: "梦幻妆"}, {name: "夏威夷"}, {name: "香格里拉"}, {name: "普罗旺斯"}]
+#
+# packs.each do |p|
+# 	Pack.create!( name: p[:name])
+# end
+# puts "create packs"
 
 
 products =[
@@ -67,7 +67,7 @@ products =[
 
 
 products.each do |ref|
-	Product.create!(title: ref[:title], description: ref[:description], category_id: ref[:category_id], pack_id: ref[:pack_id],quantity: rand(300..500), price: rand(200..600).to_i,image: open(ref[:image_path]) )
+	Product.create!(title: ref[:title], description: ref[:description], category_id: ref[:category_id], pack_id: ref[:pack_id],quantity: rand(3..20)*10, price: rand(20..60)*10.to_i,image: open(ref[:image_path]) )
 	end
 
 puts "create products"

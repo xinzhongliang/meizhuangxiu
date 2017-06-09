@@ -23,8 +23,8 @@
 </div>
 
         <!-- 妆容图片轮播 -->
-
-    <div class= "row">
+<div class="container-fluid">
+    <div class= "row-fluid">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -92,6 +92,7 @@
         </div>
       </div>
 </div>
+</div>
 
 <!-- !===== 推荐商品 =====  -->
 
@@ -109,80 +110,83 @@
         </div>
       </div>
         <div class="ontainer-fluid">
-          <div class="row-fluid">
+          <div class="row">
               <div class="col-md-3">
-                <%= link_to '#' do %> <!-- 商品连结 -->
-                  <div class="box img img-responsive center-block"><img src='https://ws4.sinaimg.cn/large/006tNbRwly1fg920otuw2j306y06y0so.jpg'></div> <!-- 商品图片 -->
+                <!-- 商品连结 -->
+                  <div class="box"><img src='https://ws4.sinaimg.cn/large/006tNbRwly1fg920otuw2j306y06y0so.jpg'></div> <!-- 商品图片 -->
                   <div class="content">
-                    <p>ysl圣罗兰气垫粉底</p> <!-- 商品名称 -->
+                    <a href="products/pack#p-line3" class="navigation-link">
+                      <strong>ysl圣罗兰气垫粉底</strong>
+                    <!-- 商品名称 -->
                     <p>$550</p> <!-- 商品价格 -->
+                    </a>
                   </div>
-                <% end %>
               </div>
 
               <div class="col-lg-3">
-                <%= link_to '#' do %>
                   <div class="box"><img src='https://ws4.sinaimg.cn/large/006tNbRwly1fg920olctzj306y06yglp.jpg'></div>
                   <div class="content">
+                    <a href="products/pack#p-line7" class="navigation-link">
                     <p>nars腮红</p>
                     <p>$450</p>
+                    </a>
                   </div>
-                <% end %>
+
               </div>
 
             <div class="col-lg-3">
-              <%= link_to '#' do %>
-                <div class="box"><img src='https://ws4.sinaimg.cn/large/006tNbRwly1fg920ngfblj306y06yt8m.jpg'></div>
+                <div class="box"><img src='http://oqecjavzf.bkt.clouddn.com/ysl%E5%9C%A3%E7%BD%97%E5%85%B0%E9%81%AE%E7%91%95%E6%98%8E%E5%BD%A9%E7%AC%94.jpg'></div>
                 <div class="content">
+                  <a href="products/pack#p-line5" class="navigation-link">
                   <p>ysl圣罗兰遮瑕明彩笔</p>
                   <p>$650</p>
+                  </a>
                 </div>
-              <% end %>
             </div>
           <div class="col-lg-3">
-            <%= link_to '#' do %>
               <div class="box"><img src='https://ws4.sinaimg.cn/large/006tNbRwly1fg920n3mrvj306y06yq2x.jpg'></div>
               <div class="content">
+                <a href="products/pack#p-line3" class="navigation-link">
                 <p>ysl春夏限量眼影盘斩男色</p>
                 <p>$550</p>
+                  </a>
               </div>
-            <% end %>
           </div>
           <div class="col-lg-3">
-            <%= link_to '#' do %>
-              <div class="box"><img src='https://ws4.sinaimg.cn/large/006tNbRwly1fg920my64aj306y06ymwy.jpg'></div>
+              <div class="box"><img src='http://oqecjavzf.bkt.clouddn.com/ysl%E5%9C%A3%E7%BD%97%E5%85%B0%E5%94%87%E9%87%8910%E8%89%B2%E5%8F%B7.jpg'></div>
+              <a href="products/pack#p-line8" class="navigation-link">
               <div class="content">
                 <p>ysl圣罗兰唇釉10色号</p>
                 <p>$350</p>
               </div>
-            <% end %>
+              </a>
           </div>
           <div class="col-md-3">
-            <%= link_to '#' do %>
               <div class="box"><img src='https://ws4.sinaimg.cn/large/006tNbRwly1fg920o2ccoj306y06y74c.jpg'></div>
+              <a href="products/pack#p-line4" class="navigation-link">
               <div class="content">
                 <p>Nars大地色眼影盘</p>
                 <p>$680</p>
               </div>
-            <% end %>
+              </a>
           </div>
           <div class="col-lg-3 ">
-            <%= link_to '#' do %>
               <div class="box center-block"><img src='https://ws3.sinaimg.cn/large/006tNbRwly1fg920pm79mj306y06ydg7.jpg'></div>
+              <a href="products/pack#p-line3" class="navigation-link">
               <div class="content">
                 <p>ysl圣罗兰水感粉底液</p>
                 <p>$565</p>
               </div>
-            <% end %>
+              </a>
           </div>
           <div class="col-md-3">
-            <%= link_to '#' do %>
               <div class="box"><img src='https://ws1.sinaimg.cn/large/006tNbRwly1fg920nqcjoj306y06yt8o.jpg'></div>
+              <a href="products/pack#p-line5" class="navigation-link">
               <div class="content">
                 <p>Nars丝绒眼线胶笔</p>
                 <p>$320</p>
               </div>
-            <% end %>
+              </a>
           </div>
         </div>
       </div>
