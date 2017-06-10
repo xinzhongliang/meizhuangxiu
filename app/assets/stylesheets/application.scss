@@ -90,12 +90,13 @@ body {
 .search-bar {
    padding-top: 5px;
    padding-right: 20px;
-   height: 60px;
+   height:60px;
   font-size: 24px;
  }
 
 .navbar-default {
-    background-color: black;
+    background: rgba(0,0,0,0.5); //半透明背景
+    // background-color: #000000;
     border-color: #020202;
     height: 62px;
     margin-bottom: 0px;
@@ -157,6 +158,13 @@ body {
     margin: 0;
     padding: 0px;
 }
+/* 短分隔线 */
+  .short-line {
+    background: #0070DE;
+    margin: 15px auto 30px auto;
+    width: 150px;
+    height: 1.5px;
+  }
 //----首页背景-----
 .jumbotron {
   background-image:url('http://i1.piimg.com/1949/82461e7c806e2709.jpg');
@@ -203,6 +211,7 @@ body {
   text-align: left;
   color: #009688;
 }
+
 //----轮播上方字体------
 
 .tagline {
@@ -219,9 +228,11 @@ body {
 }
 //----图片轮播------
 .carousel {
-  width: 1200px;
-  margin: 0 auto;
-  padding-bottom: 90px;
+  padding-left: 80px;
+  background-color:#F5F5F5 ;
+//   width: 1200px;
+//   margin: 0 auto;
+//   padding-bottom: 90px;
 }
 .carousel .item {
   height: 375px;
@@ -238,9 +249,13 @@ body {
   color:#fff;
 }
 
+//----介绍----
+.introduce-box {
+   background-color:#F5F5F5 ;
+ }
+
 
 //----妆容----
-
 
 
 //----推荐商品----
@@ -258,9 +273,39 @@ body {
   padding-top: 20px;
   font-size: 28px;
 }
+/*===== Show 首页-推荐商品 =====*/
+.show-box {
+  /* 区块 */
+  background-color: #f8f8f8;
+  text-align: center;
+  padding: 50px 0 50px 0;
 
+  /* 图片 */
+  img {
+    width: 100%;
+  }
+
+  /* 图片区块 */
+  .box {
+    margin-top: 15px;
+    box-shadow: 2px 2px 5px #888;
+  }
+
+  /* 图片区块-鼠标滑动效果 */
+  .box:hover {
+    opacity: 0.6;
+  }
+
+  /* 文字区块 */
+  .content {
+    margin-top: 15px;
+    color: #000;
+  }
+}
 //----彩妆大师---
-.master-page-mid
+.master-box {
+  background-color: #F5F5F5;
+}
 .landing-page-mid {
   margin: 15px 0px 50px;
 }
