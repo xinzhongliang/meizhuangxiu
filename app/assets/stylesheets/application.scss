@@ -70,7 +70,8 @@ body {
  }
 
 .navbar-default {
-    background-color: #000000;
+    background: rgba(0,0,0,0.5); //半透明背景
+    // background-color: #000000;
     border-color: #020202;
     height: 62px;
     margin-bottom: 0px;
@@ -113,6 +114,13 @@ body {
     margin: 0;
     padding: 0px;
 }
+/* 短分隔线 */
+  .short-line {
+    background: #0070DE;
+    margin: 15px auto 30px auto;
+    width: 150px;
+    height: 1.5px;
+  }
 //----首页背景-----
 // .jumbotron {
 //   background-image:url('http://i1.piimg.com/1949/82461e7c806e2709.jpg');
@@ -155,7 +163,10 @@ body {
   color: white;
 }
 //----图片轮播------
-
+.Carousel-box{
+   padding-left: 80px;
+   background-color:#F5F5F5 ;
+}
 .tagline {
   letter-spacing: 3px;
 }
@@ -179,50 +190,11 @@ body {
   color:#fff;
 }
 
-/* CUSTOMIZE THE CAROUSEL
--------------------------------------------------- */
-// .carousel,
-// .item,
-// .active {
-//     height: 100%;
-//     margin-bottom: 60px;
-// }
-//
-// .carousel-inner {
-//     height: 100%;
-// }
-// .outside {
-// width: 100%;
-//  height: 100%;
-//  background-position: center;
-//  -webkit-background-size: cover;
-//  -moz-background-size: cover;
-//  background-size: cover;
-//  -o-background-size: cover;
-// }
-// .follow {
-// width: 50%;
-//  height: 50%;
-//  background-position: center;
-//  -webkit-background-size: cover;
-//  -moz-background-size: cover;
-//  background-size: cover;
-//  -o-background-size: cover;
-// }
-//
-// .about {
-//   position:absolute;
-//   top:70px;
-//   right:65px;
-//   width:420px;
-//   padding:10px;
-//   background:#333;
-//   opacity:.8;
-//   color:#fff;
-// }
 
-//----妆容----
-
+//----介绍----
+.introduce-box {
+   background-color:#F5F5F5 ;
+ }
 //----推荐商品----
 .button-c {
   padding-left: 88px;
@@ -238,9 +210,39 @@ body {
   padding-top: 20px;
   font-size: 28px;
 }
+/*===== Show 首页-推荐商品 =====*/
+.show-box {
+  /* 区块 */
+  background-color: #f8f8f8;
+  text-align: center;
+  padding: 50px 0 50px 0;
 
+  /* 图片 */
+  img {
+    width: 100%;
+  }
+
+  /* 图片区块 */
+  .box {
+    margin-top: 15px;
+    box-shadow: 2px 2px 5px #888;
+  }
+
+  /* 图片区块-鼠标滑动效果 */
+  .box:hover {
+    opacity: 0.6;
+  }
+
+  /* 文字区块 */
+  .content {
+    margin-top: 15px;
+    color: #000;
+  }
+}
 //----彩妆大师---
-.master-page-mid
+.master-box {
+  background-color: #F5F5F5;
+}
 .landing-page-mid {
   float: none;
   margin: 0 auto;

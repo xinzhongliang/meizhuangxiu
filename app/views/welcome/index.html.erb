@@ -1,30 +1,37 @@
+<div class="welcome-box">
 <!-- index封面图 -->
-<div class="jumbotron">
-     <h1 class="title">LOOK look</h1>
-     <p class="slogan">你可否真正的熟悉你自己
-     <br>
-     从LOOK look开始，了解你的五官
-     <br>
-      轻松焕颜
-     </p>
-     <p class="lead"><a class="btn btn-lg btn-danger" href="/products/group">开始寻找妆容</a></p>
-</div>
-<!-- 介绍页 -->
-<div class="container-fluid">
-    <div class="landing-page-mid">
-      <div class="col-md-12">
-        <h3 class="tagline text-center">SHOP THE LOOK</h3>
-          <p class="col-md-6 col-md-offset-3 text-center tagp">
-            欢迎来到Look look <br> 让我们从三个最基本的妆容开始。 <br>
-            教你与千名美妆会员一起感受蜕变，告别单调生活。<br>
-            当季最热卖实用单品，一键式购买。</p>
-      </div>
+   <section class="landing-page-box">
+    <div class="jumbotron">
+         <h1 class="title">HOT FACE 潮妆</h1>
+         <p class="slogan">你可否真正的熟悉你自己
+              <br>
+         从LOOK look开始，了解你的五官
+              <br>
+          轻松焕颜
+         </p>
+         <p class="lead"><a class="btn btn-lg btn-danger" href="/products/group">开始寻找妆容</a></p>
     </div>
-</div>
+  </section>
+<!-- 介绍页 -->
+  <section class="introduce-box">
+    <div class="container-fluid">
+        <div class= "row">
+          <div class="col-md-12">
+            <h3 class="tagline text-center">SHOP THE LOOK</h3>
+            <hr>
+              <p class="col-md-6 col-md-offset-3 text-center tagp">
+                欢迎来到HOT face潮妆网<br> 让我们从三个最基本的妆容开始。 <br>
+                教你与千名美妆会员一起感受蜕变，告别单调生活。<br>
+                当季最热卖实用单品，一键式购买。</p>
+          </div>
+        </div>
+      </div>
+  </section>
 
         <!-- 妆容图片轮播 -->
-
+  <section class="Carousel-box">
     <div class= "row">
+      <div class="col-md-10">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -91,171 +98,146 @@
           </div>
         </div>
       </div>
-</div>
+    </div>
+  </section>
+
+
+
 
 <!-- !===== 推荐商品 =====  -->
 
-  <section class="align-center">
-    <div class="row col-md-12 ">
+  <section class="recommend-box">
+    <div class="col-md-12">
+      <div class="row">
+      <div class="discount text-center">
+      <h2>进阶妆容</h2>
+      <hr>
+    </div>
+   </div>
+  </div>
+      <!-- <h3 class="titspan">进阶妆容</h3> -->
+    <!-- <div class="row col-md-12 "> -->
       <div class="container topspan">
         <div class="row">
-          <div class="col-xs-6">
-            <h3 class="titspan">进阶妆容</h3>
-            <div class="short-line"></div>
-          </div>
-          <div class="col-xs-5">
+          <div class="col-xs-12">
             <a class="pull-right morespan" href="/products">more &gt;</a>
           </div>
+          <!-- <div class="col-xs-6"> -->
         </div>
-      </div>
-        <div class="ontainer-fluid">
-          <div class="row-fluid">
-              <div class="col-md-3">
-                <%= link_to '#' do %> <!-- 商品连结 -->
-                  <div class="box img img-responsive center-block"><img src='https://ws4.sinaimg.cn/large/006tNbRwly1fg920otuw2j306y06y0so.jpg'></div> <!-- 商品图片 -->
-                  <div class="content">
-                    <p>ysl圣罗兰气垫粉底</p> <!-- 商品名称 -->
-                    <p>$550</p> <!-- 商品价格 -->
-                  </div>
-                <% end %>
-              </div>
+          <div class="container-fluid">
+            <div class="col-xs-10">
+            <div class="row-fluid">
+                <div class="col-md-5">
+                  <%= link_to '#' do %> <!-- 商品连结 -->
+                    <div class="box img img-responsive center-block"><img src='http://i1.buimg.com/1949/38b70e68f8d5f801.jpg'></div> <!-- 商品图片 -->
+                    <div class="content">
+                      <p>气质红唇妆</p> <!-- 商品名称 -->
+                      <p>查看妆容</p> <!-- 商品价格 -->
+                    </div>
+                  <% end %>
+                </div>
+                <div class="col-lg-5 col-md-offset-2">
+                  <%= link_to '#' do %>
+                    <div class="box"><img src='http://i4.piimg.com/1949/49d0bfcef34a5fc9.jpg'></div>
+                    <div class="content">
+                      <p>粉嫩蜜桃妆</p>
+                      <p>查看妆容</p>
+                    </div>
+                  <% end %>
+                </div>
 
-              <div class="col-lg-3">
+              <div class="col-md-5">
                 <%= link_to '#' do %>
-                  <div class="box"><img src='https://ws4.sinaimg.cn/large/006tNbRwly1fg920olctzj306y06yglp.jpg'></div>
+                  <div class="box"><img src='http://i1.buimg.com/1949/db73a9e038da3e7d.jpg'></div>
                   <div class="content">
-                    <p>nars腮红</p>
-                    <p>$450</p>
+                    <p>清透自然妆</p>
+                    <p>查看妆容</p>
                   </div>
                 <% end %>
               </div>
-
-            <div class="col-lg-3">
+            <div class="col-md-5 col-md-offset-2">
               <%= link_to '#' do %>
-                <div class="box"><img src='https://ws4.sinaimg.cn/large/006tNbRwly1fg920ngfblj306y06yt8m.jpg'></div>
+                <div class="box"><img src='http://i1.buimg.com/1949/989d306a20d551a1.jpg'></div>
                 <div class="content">
-                  <p>ysl圣罗兰遮瑕明彩笔</p>
-                  <p>$650</p>
+                  <p>魅惑电眼妆</p>
+                  <p>查看妆容</p>
                 </div>
               <% end %>
             </div>
-          <div class="col-lg-3">
-            <%= link_to '#' do %>
-              <div class="box"><img src='https://ws4.sinaimg.cn/large/006tNbRwly1fg920n3mrvj306y06yq2x.jpg'></div>
-              <div class="content">
-                <p>ysl春夏限量眼影盘斩男色</p>
-                <p>$550</p>
-              </div>
-            <% end %>
-          </div>
-          <div class="col-lg-3">
-            <%= link_to '#' do %>
-              <div class="box"><img src='https://ws4.sinaimg.cn/large/006tNbRwly1fg920my64aj306y06ymwy.jpg'></div>
-              <div class="content">
-                <p>ysl圣罗兰唇釉10色号</p>
-                <p>$350</p>
-              </div>
-            <% end %>
-          </div>
-          <div class="col-md-3">
-            <%= link_to '#' do %>
-              <div class="box"><img src='https://ws4.sinaimg.cn/large/006tNbRwly1fg920o2ccoj306y06y74c.jpg'></div>
-              <div class="content">
-                <p>Nars大地色眼影盘</p>
-                <p>$680</p>
-              </div>
-            <% end %>
-          </div>
-          <div class="col-lg-3 ">
-            <%= link_to '#' do %>
-              <div class="box center-block"><img src='https://ws3.sinaimg.cn/large/006tNbRwly1fg920pm79mj306y06ydg7.jpg'></div>
-              <div class="content">
-                <p>ysl圣罗兰水感粉底液</p>
-                <p>$565</p>
-              </div>
-            <% end %>
-          </div>
-          <div class="col-md-3">
-            <%= link_to '#' do %>
-              <div class="box"><img src='https://ws1.sinaimg.cn/large/006tNbRwly1fg920nqcjoj306y06yt8o.jpg'></div>
-              <div class="content">
-                <p>Nars丝绒眼线胶笔</p>
-                <p>$320</p>
-              </div>
-            <% end %>
           </div>
         </div>
-      </div>
+       </div>
     </section>
 
 <!-- 合作彩妆师 -->
+  <section class="master-box ">
     <div class="container-fluid">
       <div class="row-fluid ">
-        <div class="team">
-            <div class="text-center col-lg-12  col-md-6 col-sm-4 col-xs-6 ">
+          <div class="text-center col-lg-12  col-md-6 col-sm-4 col-xs-6 ">
               <h3>合作彩妆大师</h3>
+              <hr>
                 <p class="team">
                   全球殿堂级彩妆大师助阵 <br> 不定期更新最in妆容教程。 <br>
                   汇集大师级的彩妆技巧和最match的产品<br>
                   来LOOK一站式搞定</p>
-            </div>
-        </div>
-      </div>
-    </div>
+          <div class="container-fluid player" id="section-referrer">
+                <div class="row-fluid">
+                  <div class="col-centered team-player">
+                    <div class="text-center col-lg-4  col-md-2 col-sm-4 col-xs-6 ">
+                      <img src="https://ws4.sinaimg.cn/large/006tNbRwly1fg9ka0365xj305k05kmwz.jpg" alt="Thumbnail Image" class="img-responsive center-block img-circle">
+                      <h4 class="title">Wayne Goss<br>
+                        <small class="text-muted text-center">英国著名化妆师自媒体人youtube频道<br>订阅粉丝数超过200万</small>
+                      </h4>
+                        <ul >
+                            <li> 很荣幸能到中国的LOOK look网站<br>给中国女性朋友教授妆容技巧，东方人的脸型<br>让我激发更多灵感。<li>
+                        </ul>
+                        <a href="#" class="btn btn-simple btn-just-icon">
+                          <i class="fa fa-weibo"></i>
+                        </a>
+                        <a href="#" class="btn btn-simple btn-just-icon">
+                          <i class="fa fa-twitter"></i>
+                        </a>
+                    </div>
+                  </div>
 
-    <div class="container-fluid player" id="section-referrer">
-          <div class="row-fluid">
-            <div class="col-centered team-player">
-              <div class="text-center col-lg-4  col-md-2 col-sm-4 col-xs-6 ">
-                <img src="https://ws4.sinaimg.cn/large/006tNbRwly1fg9ka0365xj305k05kmwz.jpg" alt="Thumbnail Image" class="img-responsive center-block img-circle">
-                <h4 class="title">Wayne Goss<br>
-                  <small class="text-muted text-center">英国著名化妆师自媒体人youtube频道<br>订阅粉丝数超过200万</small>
-                </h4>
-                  <ul >
-                      <li> 很荣幸能到中国的LOOK look网站<br>给中国女性朋友教授妆容技巧，东方人的脸型<br>让我激发更多灵感。<li>
-                  </ul>
-                  <a href="#" class="btn btn-simple btn-just-icon">
-                    <i class="fa fa-weibo"></i>
-                  </a>
-                  <a href="#" class="btn btn-simple btn-just-icon">
-                    <i class="fa fa-twitter"></i>
-                  </a>
+                  <div class="col-centered team-player">
+                      <div class="text-center col-lg-4  col-md-2 col-sm-4 col-xs-6">
+                        <img src="https://ws2.sinaimg.cn/large/006tNbRwly1fg9k9hizh0j305k05d744.jpg" alt="Thumbnail Image" class="img-responsive center-block img-circle">
+                        <h4 class="title">DANY SANZ<br>
+                          <small class="text-muted text-center">MAKE UP FOR EVER品牌创始人</small>
+                        </h4>
+                        <ul>
+                            <li> 每天负责为新产品开发新的质地和色彩<br>运用和传授化妆技巧化妆自然而然就成为了我生活的全部，希望在Look look将我的经验带到中国。<li>
+                        </ul>
+                        <a href="#" class="btn btn-simple btn-just-icon">
+                          <i class="fa fa-weibo"></i>
+                        </a>
+                        <a href="#" class="btn btn-simple btn-just-icon">
+                          <i class="fa fa-twitter"></i>
+                        </a>
+                      </div>
+                  </div>
+                  <div class="col-centered team-player">
+                      <div class="text-center col-lg-4  col-md-2 col-sm-4 col-xs-6">
+                        <img src="https://ws2.sinaimg.cn/large/006tNbRwly1fg9k8tevofj305k05k3ye.jpg" alt="Thumbnail Image" class="img-responsive center-block img-circle">
+                        <h4 class="title">Pony<br>
+                          <small class="text-muted text-center ">韩国著名彩妆博主</small>
+                        </h4>
+                        <ul>
+                            <li> 非常开心能与中国网友交流，<br>让我们一起从LOOK look寻找到更多彩妆乐趣。<li>
+                        </ul>
+                        <a href="#" class="btn btn-simple btn-just-icon">
+                          <i class="fa fa-weibo"></i>
+                        </a>
+                        <a href="#" class="btn btn-simple btn-just-icon">
+                          <i class="fa fa-twitter"></i>
+                        </a>
+                  </div>
               </div>
             </div>
-
-            <div class="col-centered team-player">
-                <div class="text-center col-lg-4  col-md-2 col-sm-4 col-xs-6">
-                  <img src="https://ws2.sinaimg.cn/large/006tNbRwly1fg9k9hizh0j305k05d744.jpg" alt="Thumbnail Image" class="img-responsive center-block img-circle">
-                  <h4 class="title">DANY SANZ<br>
-                    <small class="text-muted text-center">MAKE UP FOR EVER品牌创始人</small>
-                  </h4>
-                  <ul>
-                      <li> 每天负责为新产品开发新的质地和色彩<br>运用和传授化妆技巧化妆自然而然就成为了我生活的全部，希望在Look look将我的经验带到中国。<li>
-                  </ul>
-                  <a href="#" class="btn btn-simple btn-just-icon">
-                    <i class="fa fa-weibo"></i>
-                  </a>
-                  <a href="#" class="btn btn-simple btn-just-icon">
-                    <i class="fa fa-twitter"></i>
-                  </a>
-                </div>
-            </div>
-            <div class="col-centered team-player">
-                <div class="text-center col-lg-4  col-md-2 col-sm-4 col-xs-6">
-                  <img src="https://ws2.sinaimg.cn/large/006tNbRwly1fg9k8tevofj305k05k3ye.jpg" alt="Thumbnail Image" class="img-responsive center-block img-circle">
-                  <h4 class="title">Pony<br>
-                    <small class="text-muted text-center ">韩国著名彩妆博主</small>
-                  </h4>
-                  <ul>
-                      <li> 非常开心能与中国网友交流，<br>让我们一起从LOOK look寻找到更多彩妆乐趣。<li>
-                  </ul>
-                  <a href="#" class="btn btn-simple btn-just-icon">
-                    <i class="fa fa-weibo"></i>
-                  </a>
-                  <a href="#" class="btn btn-simple btn-just-icon">
-                    <i class="fa fa-twitter"></i>
-                  </a>
-                </div>
-            </div>
           </div>
+         </div>
         </div>
+      </div>
+    </section>
+ </div>
