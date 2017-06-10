@@ -219,72 +219,29 @@ body {
 }
 .carousel {
   width: 1200px;
-  margin: auto;
+  margin: 0 auto;
   padding-bottom: 90px;
 }
 .carousel .item {
   height: 375px;
-  margin: 0px -15px 20px;
-}
-
-.full-width-div {
-    position: relative;
-    width: 100%;
-    left: 0;
-}
-
-.topspan {
-    padding-bottom: 30px;
-    height: 35px;
-}
-
-.half-width-div {
-    width: 620px;
-    padding-bottom: 200px;
-    height: 670px;
-}
-
-.container{
-    width:100%;
-    height:200px;
-    background-color:grey;
-}
-.content{
-    float:left;
-    height:30px;
-}
-.content1{
-    background-color:blue;
-    width:300px;
-}
-.content2{
-    width:200px;
-    background-color:green;
-}
-
-.follow{
-  width:900px;
-  padding-bottom: 200px;
-  height: 670px;
 }
 
 .about {
   position:absolute;
   top:70px;
   right:65px;
-  width:800px;
-  height: 670px;
-  margin-bottom:-20px;
+  width:420px;
+  padding:10px;
   background:#333;
   opacity:.8;
   color:#fff;
 }
 
+
 //----介绍----
 .introduce-box {
    background-color:#F5F5F5 ;
  }
-
 //----推荐商品----
 .button-c {
   padding-left: 88px;
