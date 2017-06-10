@@ -44,87 +44,87 @@
 #7ac049
 */
 
-.body {
-    height: 100%;
-    margin: 0;
-}
-.html {
-    padding-bottom: 50px;
-    min-height: 100%;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    position: relative;
-}
-
-// .footer {
-//     position: absolute;
-//     bottom: 0;
-//     left: 0;
-//     right: 0;
-//     height: 50px;
-//     color: white;
-//     background-color: black;
-// }
-
-.footer-bottom {
-  margin-bottom: 70px;
-}
 
 body {
      font-family: 'Noto Sans SC', sans-serif;            // google思源黑简作为主字体
      color: #9E9E9E;                                        // 修改全站的字体主色 压低亮度
      background-color: #000;
      position: relative;
-     margin-bottom: 100px; /* 一定要和footer的高度一致 */
-     min-height: 100%;
+     margin-bottom: 220px; /* 一定要和footer的高度一致 */
+     height: 100%;
      }
 
- // .footer {
- //   position: absolute;
- //   bottom: 0;
- //   width: 100%;
- //   height: 30px;
- //   margin-bottom: -100px;
- //   z-index: 1000 /* 确保页面滑动的时候，字体不会从上面滑下去 */
- // }
+ .footer {
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+   height: 220px;
+   margin-bottom:-280px;
+   z-index: 1000 /* 确保页面滑动的时候，字体不会从上面滑下去 */
+ }
 .search-bar {
    padding-top: 5px;
    padding-right: 20px;
-   height: 60px;
+   height:60px;
   font-size: 24px;
  }
 
+
+.main {
+  margin-bottom: 70px;
+}
+
 .navbar-default {
-    background-color: black;
-    border-color: #020202;
-    height: 62px;
-    margin-bottom: 0px;
-}
+  background: rgba(0,0,0,0.5); //半透明背景
+  border-color: #020202; //边框色
+  height: 62px;
+  margin-bottom: 0; //底部 margin 不撑开距离
+ }
 
-.navbar-nav>li>a:hover{
-  color: white;
-}
-
- .navbar-default .navbar-brand {
-   color: #EF6C00; //字体颜色
-
+  .navbar-default .navbar-brand {
+   color: white; //字体颜色
    padding: 10px 15px; //上下10px，左右15px
    line-height: 30px; //文字行高
  }
 
+ .navbar-cust {
+    margin-bottom: -10px;
+
+ }
+
  .navbar-default .navbar-brand:hover,
  .navbar-default .navbar-brand:focus {
-   color: #FF6F00; //鼠标放置在链接上的文字颜色
-
+   color: white; //鼠标放置在链接上的文字颜色
    background-color: transparent; //鼠标放置在链接上的背景颜色，这里设为透明
-}
-
- .navbar-brand > img {
-     display: inline-block; //图片和链接文字显示在同一行
-     margin-right: 10px; //图片和链接文字拉开一点距离
-     width: 32px; //定制图片宽度
-     height: 32px; //定制图片高度
  }
+ //  .navbar-default .navbar-nav > li > a{
+ //   color: white;
+ //
+ // }
+ //
+ .navbar-default .navbar-nav > li > a:hover,
+ .navbar-default .navbar-nav > li > a:focus {
+   color:  #333;
+
+   background-color: transparent;
+ }
+ // .navbar-default .navbar-nav > .active > a,
+ // .navbar-default .navbar-nav > .active > a:hover,
+ // .navbar-default .navbar-nav > .active > a:focus {
+ //   color: white;
+ //
+ //   background-color: transparent;
+ //
+ // }
+ //
+ // .navbar-default .navbar-nav > .open > a,
+ // .navbar-default .navbar-nav > .open > a:focus,
+ // .navbar-default .navbar-nav > .open > a:hover {
+ //   background-color: transparent;
+ //
+ //   color: white;
+ // }
+ //
 
 .dropdown {
     position: relative;
@@ -133,7 +133,7 @@ body {
 }
 
 .dropdown:hover {
-    background-color: white;
+    background-color: transparent;
 }
 
 .dropdown:hover .links {
@@ -157,19 +157,26 @@ body {
     margin: 0;
     padding: 0px;
 }
+/* 短分隔线 */
+  .short-line {
+    background: #0070DE;
+    margin: 15px auto 30px auto;
+    width: 150px;
+    height: 1.5px;
+  }
 //----首页背景-----
 .jumbotron {
   background-image:url('http://i1.piimg.com/1949/82461e7c806e2709.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  margin-top: 70px;
   padding-bottom: 110px;
-  margin-top: -70px;
 }
 .container-fluid .jumbotron{
   background-image:url('http://i1.piimg.com/1949/82461e7c806e2709.jpg');
   background-repeat: no-repeat;
   padding-bottom: 73px;//内部的底部边距，这样按钮不会很靠近底部了
-  margin: 0px -15px 20px;//顶部margin为0，因此可以直接接着导航栏；左右margin为负15，因此可以顶到浏览器的边缘（抵消 container-fluid 的 15px 左右padding);底部margin为20，会跟下面的内容撑开距离
+  margin: auto;//顶部margin为0，因此可以直接接着导航栏；左右margin为负15，因此可以顶到浏览器的边缘（抵消 container-fluid 的 15px 左右padding);底部margin为20，会跟下面的内容撑开距离
   border-radius: 0;//圆角为0
 }
 
@@ -182,18 +189,17 @@ body {
 .jumbotron .title {
   // font-family: "Helvetica Neue", "Microsoft Yahei", 微软雅黑;
   text-align: left;
-  margin-top: 200px;
+  margin-top: 300px;
   margin-left: 80px;
   margin-bottom: 80px;
-  color: #FF5722;
 }
 
 .slogan {
   margin-top: 10px;
-  padding-left: 80px;
   margin-bottom: 50px;
+  margin-left: 80px;
   text-align: left;
-  color: #337ab7;
+  color: white;
   top: 12px;
 }
 
@@ -201,23 +207,16 @@ body {
   margin-bottom: 60px;
   margin-left: 80px;
   text-align: left;
-  color: #009688;
-}
-//----轮播上方字体------
-
-.tagline {
-  letter-spacing: 3px;
-  font-size: 30px;
-  color: #B0B0B0;
-}
-
-
-.tagp {
-  margin-bottom: 30px;
-  font-size: 20px;
-  color: #B0B0B0;
+  color: white;
 }
 //----图片轮播------
+.Carousel-box{
+   padding-left: 80px;
+   background-color:#F5F5F5 ;
+}
+.tagline {
+  letter-spacing: 3px;
+}
 .carousel {
   width: 1200px;
   margin: 0 auto;
@@ -239,10 +238,10 @@ body {
 }
 
 
-//----妆容----
-
-
-
+//----介绍----
+.introduce-box {
+   background-color:#F5F5F5 ;
+ }
 //----推荐商品----
 .button-c {
   padding-left: 88px;
@@ -258,11 +257,43 @@ body {
   padding-top: 20px;
   font-size: 28px;
 }
+/*===== Show 首页-推荐商品 =====*/
+.show-box {
+  /* 区块 */
+  background-color: #f8f8f8;
+  text-align: center;
+  padding: 50px 0 50px 0;
 
+  /* 图片 */
+  img {
+    width: 100%;
+  }
+
+  /* 图片区块 */
+  .box {
+    margin-top: 15px;
+    box-shadow: 2px 2px 5px #888;
+  }
+
+  /* 图片区块-鼠标滑动效果 */
+  .box:hover {
+    opacity: 0.6;
+  }
+
+  /* 文字区块 */
+  .content {
+    margin-top: 15px;
+    color: #000;
+  }
+}
 //----彩妆大师---
-.master-page-mid
+.master-box {
+  background-color: #F5F5F5;
+}
 .landing-page-mid {
-  margin: 15px 0px 50px;
+  float: none;
+  margin: 0 auto;
+  margin-top: 15px;
 }
 
 .col-centered{
@@ -421,53 +452,60 @@ body {
 
 
 // ----分类页面可分类查看-----
-.gallery-title
-{
-    font-size: 36px;
-    color: #42B32F;
-    text-align: center;
-    font-weight: 500;
-    margin-bottom: 70px;
-}
-.gallery-title:after {
-    content: "";
-    position: absolute;
-    width: 12.5%;
-    left: 46.5%;
-    height: 45px;
-}
-.filter-button
-{
-    font-size: 18px;
-    border: 1px solid #42B32F;
-    border-radius: 5px;
-    text-align: center;
-    color: #42B32F;
-    margin-bottom: 30px;
+// .gallery-title
+// {
+//     font-size: 36px;
+//     color: #42B32F;
+//     text-align: center;
+//     font-weight: 500;
+//     margin-bottom: 70px;
+// }
+// .gallery-title:after {
+//     content: "";
+//     position: absolute;
+//     width: 12.5%;
+//     left: 46.5%;
+//     height: 45px;
+// }
+// .filter-button
+// {
+//     font-size: 18px;
+//     border: 1px solid #42B32F;
+//     border-radius: 5px;
+//     text-align: center;
+//     color: #42B32F;
+//     margin-bottom: 30px;
+//
+// }
+// .filter-button:hover
+// {
+//     font-size: 18px;
+//     border: 1px solid #42B32F;
+//     border-radius: 5px;
+//     text-align: center;
+//     color: #ffffff;
+//     background-color: #42B32F;
+//
+// }
+// .btn-default:active .filter-button:active
+// {
+//     background-color: #42B32F;
+//     color: white;
+// }
+//
+// .port-image
+// {
+//     width: 100%;
+// }
+//
+// .gallery_product
+// {
+//     margin-bottom: 30px;
+// }
 
+.admin-panel {
+  padding-left: 200px;
 }
-.filter-button:hover
-{
-    font-size: 18px;
-    border: 1px solid #42B32F;
-    border-radius: 5px;
-    text-align: center;
-    color: #ffffff;
-    background-color: #42B32F;
-
-}
-.btn-default:active .filter-button:active
-{
-    background-color: #42B32F;
-    color: white;
-}
-
-.port-image
-{
-    width: 100%;
-}
-
-.gallery_product
-{
-    margin-bottom: 30px;
+.cat-div {
+  padding-bottom: 20px;
 }

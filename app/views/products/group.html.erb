@@ -1,7 +1,7 @@
 
 
 <div class="panel panel-default">
-  <div class="panel-body">
+  <div class="panel-body admin-panel">
     <div id="search-page" class="container-fluid products-show-page">
       <div class="col-md-10 col-md-offset-1">
 
@@ -14,15 +14,18 @@
     </div>
   </div>
 
-<a href=#g-line2>眼妆 </a>
-<a href=#g-line3>底妆 </a>
-<a href=#g-line4>唇妆 </a>
-<a href=#g-line5>粉底 </a>
-  <div class="row">
-    <h2><a name="g-line1">彩妆 </a> </h2>
 
+  <div class="row">
+    <div class="cat-div">
+      <h2><a name="g-line1">彩妆 </a> </h2>
+      <a href=#g-line2>眼妆 </a>
+      <a href=#g-line3>底妆 </a>
+      <a href=#g-line4>唇妆 </a>
+      <a href=#g-line5>粉底 </a>
+    </div>
+<hr>
     <% @products.where(:category_id => 1).each do |product| %>
-      <div class="col-xs-6 col-md-3">
+      <div class="col-xs-6 col-md-3 cat-div">
         <%= link_to product_path(product) do %>
           <% if product.image.present? %>
             <%= image_tag(product.image.thumb.url, class: "thumbnail") %>
