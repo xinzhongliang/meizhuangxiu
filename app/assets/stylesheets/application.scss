@@ -44,6 +44,31 @@
 #7ac049
 */
 
+.body {
+    height: 100%;
+    margin: 0;
+}
+.html {
+    padding-bottom: 50px;
+    min-height: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    position: relative;
+}
+
+// .footer {
+//     position: absolute;
+//     bottom: 0;
+//     left: 0;
+//     right: 0;
+//     height: 50px;
+//     color: white;
+//     background-color: black;
+// }
+
+.footer-bottom {
+  margin-bottom: 70px;
+}
 
 body {
      font-family: 'Noto Sans SC', sans-serif;            // google思源黑简作为主字体
@@ -54,14 +79,14 @@ body {
      min-height: 100%;
      }
 
- footer {
-   position: absolute;
-   bottom: 0;
-   width: 100%;
-   height: 30px;
-   margin-bottom: -100px;
-   z-index: 1000 /* 确保页面滑动的时候，字体不会从上面滑下去 */
- }
+ // .footer {
+ //   position: absolute;
+ //   bottom: 0;
+ //   width: 100%;
+ //   height: 30px;
+ //   margin-bottom: -100px;
+ //   z-index: 1000 /* 确保页面滑动的时候，字体不会从上面滑下去 */
+ // }
 .search-bar {
    padding-top: 5px;
    padding-right: 20px;
@@ -78,10 +103,29 @@ body {
 }
 
 .navbar-nav>li>a:hover{
-  color: #ff5722;
+  color: white;
 }
 
+ .navbar-default .navbar-brand {
+   color: #EF6C00; //字体颜色
 
+   padding: 10px 15px; //上下10px，左右15px
+   line-height: 30px; //文字行高
+ }
+
+ .navbar-default .navbar-brand:hover,
+ .navbar-default .navbar-brand:focus {
+   color: #FF6F00; //鼠标放置在链接上的文字颜色
+
+   background-color: transparent; //鼠标放置在链接上的背景颜色，这里设为透明
+}
+
+ .navbar-brand > img {
+     display: inline-block; //图片和链接文字显示在同一行
+     margin-right: 10px; //图片和链接文字拉开一点距离
+     width: 32px; //定制图片宽度
+     height: 32px; //定制图片高度
+ }
 
 .dropdown {
     position: relative;
@@ -90,11 +134,11 @@ body {
 }
 
 .dropdown:hover {
-    background-color: #FF5722
+    background-color: white;
 }
 
 .dropdown:hover .links {
-    color: #FF5722;
+    color: white;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -105,7 +149,7 @@ body {
     position: absolute;
     top: 100%;
     display: none;
-    background-color: #FF5722;
+    background-color: white;
     color: #333;
     left: 0px;
     border: 0;
@@ -122,17 +166,18 @@ body {
     height: 1.5px;
   }
 //----首页背景-----
-// .jumbotron {
-//   background-image:url('http://i1.piimg.com/1949/82461e7c806e2709.jpg');
-//   background-repeat: no-repeat;
-//   background-size: cover;
-//   padding-bottom: 110px;
-// }
+.jumbotron {
+  background-image:url('http://i1.piimg.com/1949/82461e7c806e2709.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 110px;
+  margin-top: -70px;
+}
 .container-fluid .jumbotron{
   background-image:url('http://i1.piimg.com/1949/82461e7c806e2709.jpg');
   background-repeat: no-repeat;
   padding-bottom: 73px;//内部的底部边距，这样按钮不会很靠近底部了
-  margin: auto;//顶部margin为0，因此可以直接接着导航栏；左右margin为负15，因此可以顶到浏览器的边缘（抵消 container-fluid 的 15px 左右padding);底部margin为20，会跟下面的内容撑开距离
+  margin: 0px -15px 20px;//顶部margin为0，因此可以直接接着导航栏；左右margin为负15，因此可以顶到浏览器的边缘（抵消 container-fluid 的 15px 左右padding);底部margin为20，会跟下面的内容撑开距离
   border-radius: 0;//圆角为0
 }
 
@@ -146,34 +191,48 @@ body {
   // font-family: "Helvetica Neue", "Microsoft Yahei", 微软雅黑;
   text-align: left;
   margin-top: 200px;
+  margin-left: 80px;
   margin-bottom: 80px;
+  color: #FF5722;
 }
 
 .slogan {
   margin-top: 10px;
+  padding-left: 80px;
   margin-bottom: 50px;
   text-align: left;
-  color: white;
+  color: #337ab7;
   top: 12px;
 }
 
 .lead {
   margin-bottom: 60px;
+  margin-left: 80px;
   text-align: left;
-  color: white;
+  color: #009688;
 }
-//----图片轮播------
-.Carousel-box{
-   padding-left: 80px;
-   background-color:#F5F5F5 ;
-}
+
+//----轮播上方字体------
+
 .tagline {
   letter-spacing: 3px;
+  font-size: 30px;
+  color: #B0B0B0;
 }
+
+
+.tagp {
+  margin-bottom: 30px;
+  font-size: 20px;
+  color: #B0B0B0;
+}
+//----图片轮播------
 .carousel {
-  width: 1200px;
-  margin: 0 auto;
-  padding-bottom: 90px;
+  padding-left: 80px;
+  background-color:#F5F5F5 ;
+//   width: 1200px;
+//   margin: 0 auto;
+//   padding-bottom: 90px;
 }
 .carousel .item {
   height: 375px;
@@ -190,11 +249,15 @@ body {
   color:#fff;
 }
 
-
 //----介绍----
 .introduce-box {
    background-color:#F5F5F5 ;
  }
+
+
+//----妆容----
+
+
 //----推荐商品----
 .button-c {
   padding-left: 88px;
@@ -244,9 +307,7 @@ body {
   background-color: #F5F5F5;
 }
 .landing-page-mid {
-  float: none;
-  margin: 0 auto;
-  margin-top: 15px;
+  margin: 15px 0px 50px;
 }
 
 .col-centered{

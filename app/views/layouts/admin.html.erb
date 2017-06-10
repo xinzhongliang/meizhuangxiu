@@ -7,24 +7,31 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="container">
-    <%= render "common/navbar" %>
-    <div class="row">
-      <div class="col-md-2">
-        <ul class="nav nav-pills nav-stacked" style="max-width: 300px;">
-          <li> <%= link_to("Products", admin_products_path) %> </li>
-          <li> <%= link_to("Orders", admin_orders_path) %></li>
-          <li><%= link_to("Categories", admin_categories_path) %></li>
-          <li><%= link_to("Packs", admin_packs_path) %></li>
-        </ul>
-      </div>
-      <div class="col-md-10">
-        <%= yield %>
+
+      <div class="container-fluid">
+        <%= render "common/navbar" %>
+        <div class="panel panel-default">
+          <div class="panel-body">
+        <div class="row">
+          <div class="col-lg-12">
+            <ul class="nav nav-pills nav-stacked" style="max-width: 300px;">
+              <li> <%= link_to("Products", admin_products_path) %> </li>
+              <li> <%= link_to("Orders", admin_orders_path) %></li>
+              <li><%= link_to("Categories", admin_categories_path) %></li>
+              <li><%= link_to("Packs", admin_packs_path) %></li>
+            </ul>
+          </div>
+          <div class="col-md-10">
+            <%= yield %>
+          </div>
+
+        </div>
       </div>
     </div>
   </div>
-  <div class="navbar navbar-blend ">
-      <div class="nav"><span><%= render "common/footer" %></span></div>
-  </div>
+      <div class="footer">
+          <%= render "common/footer" %>
+      </div>
+
 </body>
 </html>

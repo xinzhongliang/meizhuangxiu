@@ -5,12 +5,13 @@
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="shortcut icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
   </head>
 
   <body >
-    <div class="container-fluid" style="margin-bottom:50px">
-      <div class="row">
+    <div class="container-fluid footer-bottom" style="margin-bottom: 70px;>
+      <div class="row-fluid">
         <%= render "common/navbar" %>
         <%= render "common/flashes" %>
       </div>
@@ -18,8 +19,9 @@
         <%= yield %>
       </div>
    </div>
-  </body>
+
     <div >
      <%= render "common/footer" %>
     </div>
+      </body>
 </html>

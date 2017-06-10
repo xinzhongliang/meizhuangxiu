@@ -4,9 +4,8 @@ class Admin::ProductsController < ApplicationController
   before_action :admin_required
 
   def index
-    if params[:category].blank? && params[:pack].blank?
-      @products = Product.all
-    else
+    @products = Product.all
+    if params[:category].present?
       @category_id = Category.find_by(name: params[:categaory]).id
       @products = Product.where(:category_id => @category_id).order("created_at DESC")
     end

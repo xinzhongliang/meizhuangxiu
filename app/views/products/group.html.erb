@@ -13,78 +13,15 @@
     <div>
     </div>
   </div>
-<!--
-  <div class="container">
-        <div class="row">
-        <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <h1 class="gallery-title">所有分类</h1>
-        </div>
 
-        <div align="center">
-            <button class="btn btn-default filter-button" data-filter="all">All</button>
-            <button class="btn btn-default filter-button" data-filter="hdpe">HDPE Pipes</button>
-            <button class="btn btn-default filter-button" data-filter="sprinkle">Sprinkle Pipes</button>
-            <button class="btn btn-default filter-button" data-filter="spray">Spray Nozzle</button>
-            <button class="btn btn-default filter-button" data-filter="irrigation">Irrigation Pipes</button>
-        </div>
-        <br/>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
-                <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-            </div>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprinkle">
-                <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-            </div>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
-                <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-            </div>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
-                <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-            </div>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
-                <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-            </div>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
-                <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-            </div>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
-                <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-            </div>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
-                <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-            </div>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
-                <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-            </div>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
-                <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-            </div>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
-                <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-            </div>
-
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprinkle">
-                <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-            </div>
-        </div>
-    </div>
- -->
-
-
+<a href=#g-line2>眼妆 </a>
+<a href=#g-line3>底妆 </a>
+<a href=#g-line4>唇妆 </a>
+<a href=#g-line5>粉底 </a>
   <div class="row">
-    <h2>彩妆 </h2>
+    <h2><a name="g-line1">彩妆 </a> </h2>
 
-    <% @products.where(:category_id =>  1).each do |product| %>
+    <% @products.where(:category_id => 1).each do |product| %>
       <div class="col-xs-6 col-md-3">
         <%= link_to product_path(product) do %>
           <% if product.image.present? %>
@@ -98,11 +35,16 @@
         总浏览量: <%= product.impressionist_count(:filter=>:session_hash) %>
       </div>
     <% end %>
-  </div>
+</div>
 <hr>
   <div class="row">
-    <h2>眼妆 </h2>
-
+    <h2><a name="g-line2">眼妆 </a> </h2>
+    <div style="margin-bottom: 20px">
+      <a href=#g-line1>彩妆 </a>
+      <a href=#g-line3>底妆 </a>
+      <a href=#g-line4>唇妆 </a>
+      <a href=#g-line5>粉底 </a>
+    </div>
     <% @products.where(:category_id =>  2).each do |product| %>
       <div class="col-xs-6 col-md-3">
         <%= link_to product_path(product) do %>
@@ -119,28 +61,14 @@
     <% end %>
   </div>
   <hr>
-    <div class="row">
-      <h2>唇妆 </h2>
-
-      <% @products.where(:category_id =>  4).each do |product| %>
-        <div class="col-xs-6 col-md-3">
-          <%= link_to product_path(product) do %>
-            <% if product.image.present? %>
-              <%= image_tag(product.image.thumb.url, class: "thumbnail") %>
-            <% else %>
-              <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
-            <% end %>
-          <% end %>
-          <%= product.title %> ￥ <%= product.price %>
-          <br>
-          总浏览量: <%= product.impressionist_count(:filter=>:session_hash) %>
-        </div>
-      <% end %>
-    </div>
-    <hr>
       <div class="row">
-        <h2>底妆 </h2>
-
+        <h2><a name="g-line3">底妆 </a></h2>
+        <div style="margin-bottom: 20px">
+          <a href=#g-line1>彩妆 </a>
+          <a href=#g-line2>眼妆 </a>
+          <a href=#g-line4>唇妆 </a>
+          <a href=#g-line5>粉底 </a>
+        </div>
         <% @products.where(:category_id =>  3).each do |product| %>
           <div class="col-xs-6 col-md-3">
             <%= link_to product_path(product) do %>
@@ -156,4 +84,54 @@
           </div>
         <% end %>
       </div>
+
+      <div class="row">
+        <h2><a name="g-line4">唇妆</a> </h2>
+        <div style="margin-bottom: 20px">
+          <a href=#g-line1>彩妆 </a>
+          <a href=#g-line2>眼妆 </a>
+          <a href=#g-line3>底妆 </a>
+          <a href=#g-line5>粉底 </a>
+        </div>
+        <% @products.where(:category_id =>  4).each do |product| %>
+          <div class="col-xs-6 col-md-3">
+            <%= link_to product_path(product) do %>
+              <% if product.image.present? %>
+                <%= image_tag(product.image.thumb.url, class: "thumbnail") %>
+              <% else %>
+                <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
+              <% end %>
+            <% end %>
+            <%= product.title %> ￥ <%= product.price %>
+            <br>
+            总浏览量: <%= product.impressionist_count(:filter=>:session_hash) %>
+          </div>
+        <% end %>
+      </div>
+      <hr>
+
+      <div class="row">
+        <div style="margin-bottom: 20px">
+        <h2><a name="g-line5">粉底 </a></h2>
+        <a href=#g-line1>彩妆 </a>
+        <a href=#g-line2>眼妆 </a>
+        <a href=#g-line3>底妆 </a>
+        <a href=#g-line4>唇妆 </a>
+        </div>
+        <% @products.where(:category_id =>  5).each do |product| %>
+          <div class="col-xs-6 col-md-3">
+            <%= link_to product_path(product) do %>
+              <% if product.image.present? %>
+                <%= image_tag(product.image.thumb.url, class: "thumbnail") %>
+              <% else %>
+                <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
+              <% end %>
+            <% end %>
+            <%= product.title %> ￥ <%= product.price %>
+            <br>
+            总浏览量: <%= product.impressionist_count(:filter=>:session_hash) %>
+          </div>
+        <% end %>
+      </div>
+      <hr>
 </div>

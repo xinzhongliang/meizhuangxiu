@@ -15,7 +15,6 @@
 //= require jquery_ujs
 //= require bootstrap/alert
 //= require bootstrap/dropdown
-//= require bootstrap/modal
 //= require bootstrap/carousel
 //= require autosize.min
 //= require jquery.countdown.min

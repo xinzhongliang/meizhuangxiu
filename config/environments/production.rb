@@ -87,24 +87,34 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   ActionMailer::Base.smtp_settings = {
-    address: "smtpcloud.sohu.com",
+    address: "smtpdm.aliyun.com",
     port: 25,
     domain: "heroku.com",
+    openssl_verify_mode: 'none',
     authentication: "login",
-    enable_starttls_auto: true,
-    user_name: ENV["SEND_CLOUD_USER_NAME"],
-    password: ENV["SEND_CLOUD_USER_KEY"]
+    enable_starttls_auto: false,
+    user_name: ENV["ALI_CLOUD_USER_NAME"],
+    password: ENV["ALI_CLOUD_USER_KEY"]
+
+    # address: "smtpdm.aliyun.com",
+    # port: 80,
+    # domain: "heroku.com",
+    # openssl_verify_mode: 'none',
+    # authentication: "login",
+    # enable_starttls_auto: true,
+    # user_name: ENV["ALI_CLOUD_USER_NAME"],
+    # password: ENV["ALI_CLOUD_USER_KEY"]
     }
 
 
-    config.cache_store = :dalli_store,
-                          (ENV["MEMCACHIER_SERVERS"] || "").split(","),
-                          {:username => ENV["MEMCACHIER_USERNAME"],
-                           :password => ENV["MEMCACHIER_PASSWORD"],
-                           :failover => true,
-                           :socket_timeout => 1.5,
-                           :socket_failure_delay => 0.2,
-                           :down_retry_delay => 60
-                          }
+  # config.cache_store = :dalli_store,
+  #                       (ENV["MEMCACHIER_SERVERS"] || "").split(","),
+  #                       {:username => ENV["MEMCACHIER_USERNAME"],
+  #                        :password => ENV["MEMCACHIER_PASSWORD"],
+  #                        :failover => true,
+  #                        :socket_timeout => 1.5,
+  #                        :socket_failure_delay => 0.2,
+  #                        :down_retry_delay => 60
+  #                       }
 
 end

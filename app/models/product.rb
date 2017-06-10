@@ -15,6 +15,8 @@ class Product < ApplicationRecord
     self.save
   end
 
+
+
   validates :category_id, presence: true
   validates :pack_id, presence: true
 end

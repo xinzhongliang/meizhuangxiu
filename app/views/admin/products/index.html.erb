@@ -1,57 +1,57 @@
 
-<div class="pull-right">
-  <%= link_to("新增货品", new_admin_product_path, :class => "btn btn-md btn-primary" ) %>
-</div>
+  <div class="pull-right">
+    <%= link_to("新增货品", new_admin_product_path, :class => "btn btn-md btn-primary" ) %>
+  </div>
 
-<br><br>
+  <br><br>
 
-<table class="table table-bordered table-hover table-striped custab">
+  <table class="table table-hover table-striped custab">
 
-  <h1>Product list</h1>
-  <thead>
+    <h1>Product list</h1>
+    <thead>
+      <tr>
+        <td></td>
+        <td>类别</td>
+        <td>套餐</td>
+        <td widtth="220">图片</td>
+        <td>品名</td>
+        <td>价格</td>
+        <td>数量</td>
+        <td width="100">选项</td>
+      </tr>
+    </thead>
+    <% @products.each do |product| %>
     <tr>
-      <td></td>
-      <td>类别</td>
-      <td>套餐</td>
-      <td widtth="220">图片</td>
-      <td>品名</td>
-      <td>价格</td>
-      <td>数量</td>
-      <td width="100">选项</td>
-    </tr>
-  </thead>
-  <% @products.each do |product| %>
-  <tr>
-    <td>
-      <%= render_product_status(product) %>
-      <%= link_to(product.title, admin_product_path(product)) %>
-    </td>
+      <td>
+        <%= render_product_status(product) %>
+        <%= link_to(product.title, admin_product_path(product)) %>
+      </td>
 
-    <td><%= product.category.name %></td>
-    <td><%= product.pack.name %></td>
-    <td>
-      <%= link_to admin_product_path(product) do %>
-        <% if product.image.present? %>
-          <%= image_tag(product.image.thumb.url, class: "thumbnail") %>
-        <% else %>
-          <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
+      <td><%= product.category.name %></td>
+      <td><%= product.pack.name %></td>
+      <td>
+        <%= link_to admin_product_path(product) do %>
+          <% if product.image.present? %>
+            <%= image_tag(product.image.thumb.url, class: "thumbnail") %>
+          <% else %>
+            <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
+          <% end %>
         <% end %>
-      <% end %>
-    </td>
-    <td>
-      <%= product.title %>
-    </td>
-    <td><%= product.price %></td>
-    <td><%= product.quantity %></td>
-    <td>
-      <%= link_to edit_admin_product_path(product), class: "btn btn-xs btn-info" do %><i class="fa fa-pencil"></i><% end %>
-      <%= link_to admin_product_path(product), :method => :delete, :class => "btn btn-xs btn-danger", :data => { :confirm => "Are you sure?" } do %> <i class="fa fa-trash-o"></i> <% end %>
-      <% if product.is_hidden %>
-        <%= link_to publish_admin_product_path(product), :method => :post, :class => "btn btn-xs btn-default" do %><i class="fa fa-eye"></i><% end %>
-      <% else %>
-        <%= link_to hide_admin_product_path(product), :method => :post, :class => "btn btn-xs btn-default" do %><i class="fa fa-eye-slash"></i><% end %>
-      <% end %>
-    </td>
-  </tr>
-  <% end %>
-</table>
+      </td>
+      <td>
+        <%= product.title %>
+      </td>
+      <td><%= product.price %></td>
+      <td><%= product.quantity %></td>
+      <td>
+        <%= link_to edit_admin_product_path(product), class: "btn btn-xs btn-info" do %><i class="fa fa-pencil"></i><% end %>
+        <%= link_to admin_product_path(product), :method => :delete, :class => "btn btn-xs btn-danger", :data => { :confirm => "Are you sure?" } do %> <i class="fa fa-trash-o"></i> <% end %>
+        <% if product.is_hidden %>
+          <%= link_to publish_admin_product_path(product), :method => :post, :class => "btn btn-xs btn-default" do %><i class="fa fa-eye"></i><% end %>
+        <% else %>
+          <%= link_to hide_admin_product_path(product), :method => :post, :class => "btn btn-xs btn-default" do %><i class="fa fa-eye-slash"></i><% end %>
+        <% end %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
