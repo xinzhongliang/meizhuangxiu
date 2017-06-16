@@ -92,18 +92,9 @@ Rails.application.configure do
     domain: "heroku.com",
     openssl_verify_mode: 'none',
     authentication: "login",
-    enable_starttls_auto: false,
+    enable_stattls_auto: false,
     user_name: ENV["ALI_CLOUD_USER_NAME"],
-    password: ENV["ALI_CLOUD_USER_KEY"]
-
-    # address: "smtpdm.aliyun.com",
-    # port: 80,
-    # domain: "heroku.com",
-    # openssl_verify_mode: 'none',
-    # authentication: "login",
-    # enable_starttls_auto: true,
-    # user_name: ENV["ALI_CLOUD_USER_NAME"],
-    # password: ENV["ALI_CLOUD_USER_KEY"]
+    password: ENV["ALI_CLOUD_USER_KEY"],
     }
 
 
